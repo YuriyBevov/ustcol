@@ -1,11 +1,10 @@
+// Общие стили для всего сайта
 @import './_base/main';
-
-// Стили шаблона
 
 *,
 *::before,
 *::after {
-  // @extend %scrollbar;
+  @extend %scrollbar;
 }
 
 
