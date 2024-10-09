@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  text-size-adjust: none;
+  scroll-behavior: smooth;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family:      var(--site-base-font-family);
+  font-weight:      var(--site-base-font-weight);
+  font-size:        var(--site-base-font-size);
+  line-height:      var(--site-base-line-height);
+  letter-spacing:   var(--site-base-line-height);
+  color:            var(--site-base-text-color);
+  background-color: var(--site-bg-color);
+  overflow-x: hidden !important;
+  -webkit-font-smoothing: antialiased;
+  scrollbar-gutter: stable;
+}
+
+

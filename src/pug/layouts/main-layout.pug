@@ -1,0 +1,12 @@
+include ./main-head
+
+doctype html
+
+block variables
+
+html(lang="ru")
+  +main-head(title, description)
+body
+  //- include ../components/header/header
+  block content
+  //- include ../components/footer/footer
