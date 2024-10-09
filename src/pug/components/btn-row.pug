@@ -1,0 +1,10 @@
+include ./ui/main-btn/main-btn
+include ./ui/main-btn/main-link
+
+mixin btn-row(data)
+  .btn-row
+    each item in data
+      if item.type == "button"
+        +main-btn(item)
+      if item.type == "link"
+        +main-link(item)

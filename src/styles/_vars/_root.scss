@@ -22,7 +22,7 @@
 
 // containers
 :root {
-  --content-width: 1440px;
+  --content-width: 1680px;
   --container-offset: clamp(20px, 2.6vw, 60px);
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   --content-fluid-width: 1920px;
@@ -34,7 +34,7 @@
 
 // transitions
 :root {
-  --base-transition: 0.25s linear;
+  --main-transition: 0.3s linear;
 }
 
 // site-base-options
@@ -42,7 +42,7 @@
   --site-base-font-family: var(--primary-font);
   --site-base-font-weight: 400;
   --site-base-font-size: 16px;
-  --site-base-line-height: 1.5;
+  --site-base-line-height: 1.25;
   --site-base-text-color: var(--dark);
   --site-bg-color: var(--white);
 }
@@ -54,4 +54,9 @@
   --scrollbar-border-radius: 0;
   --scrollbar-thumb-color: var(--primary);
   --scrollbar-thumb-border-radius: 0;
+}
+
+// offsets
+:root {
+  --main-offset: clamp(24px, 3.2vw, 50px);
 }

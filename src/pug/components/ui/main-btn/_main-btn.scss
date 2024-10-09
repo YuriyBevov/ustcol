@@ -1,0 +1,23 @@
+.main-btn {
+  @extend %btn-reset;
+  background-color: var(--primary);
+  border-color: var(--white);
+  padding: 16px clamp(20px, 3vw, 32px) 14px;
+  color: var(--white);
+  font-size: clamp(16px, 3vw, 18px);
+  font-weight: 700;
+  width: fit-content;
+  max-width: 320px;
+
+  &--outlined {
+    background-color: var(--white);
+    border-color: var(--primary);
+    color: var(--primary);
+
+    @extend %main-btn-outlined-hover;
+  }
+
+  &:not(.main-btn--outlined) {
+    @extend %main-btn-hover;
+  }
+}

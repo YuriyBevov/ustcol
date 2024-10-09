@@ -1,0 +1,6 @@
+mixin base-title(data)
+  if data.overTitleText
+    .base-subtitle-wrapper
+      span.base-subtitle!= data.overTitleText
+      b.base-subtitle-line(aria-hidden="true")
+  #{data.titleTag ? data.titleTag : 'h2'}.base-title!= data.title

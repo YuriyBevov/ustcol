@@ -1,7 +1,26 @@
-include ../components/test-mixin.pug
+include ../components/base-title
+include ../components/btn-row
 
-section.base-section
+section.base-section.hero
   .container
-    +test-mixin({
-      text: 'tst'
-    })
+    .hero__content
+      +base-title({
+        overTitleText: 'Коллегия адвокатов',
+        title: 'Добро пожаловать в коллегию адвокатов “ЮСТИКОМ”'
+      })
+
+      p.base-text.base-text--lg Когда важна каждая деталь.
+
+      +btn-row([
+        {
+          type: 'button',
+          text: 'Заказать звонок',
+          trigger: 'callback-modal'
+        },
+        {
+          type: 'button',
+          text: 'Получить консультацию',
+          cls: 'main-btn--outlined',
+          trigger: 'consult-modal'
+        }
+      ])

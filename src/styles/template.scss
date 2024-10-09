@@ -1,6 +1,8 @@
 // Общие стили для всего сайта
 @import './_base/main';
 
+@import "../pug/components/ui/main-btn/main-btn";
+
 *,
 *::before,
 *::after {
@@ -44,3 +46,67 @@ picture {
   display: flex;
 }
 
+.btn-row {
+  @extend %flex-wrap;
+
+  * {
+    flex-grow: 1;
+  }
+}
+
+.base-section {
+  container: base-section / inline-size;
+}
+
+.base-title {
+  display: inline-block;
+  font-family: var(--secondary-font);
+  font-size: clamp(24px, 4vw, 48px);
+  font-weight: 600;
+  margin: 0;
+}
+
+.base-subtitle-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 20px;
+
+  @container base-section (max-width: 534px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .base-subtitle {
+    flex-grow: 1;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: -0.03em;
+    color: var(--primary);
+    max-width: fit-content;
+
+    &-line {
+      display: block;
+      width: clamp(80px, 15vw, 180px);
+      max-width: 150px;
+      height: 2px;
+      margin-top: 3px;
+      background-color: var(--primary);
+
+      @container base-section (max-width: 534px) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.base-text {
+  display: inline-block;
+  margin: 0;
+
+  &--lg {
+    font-size: clamp(16px, 3vw, 24px);
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,32 @@
+.hero {
+  background-image: url("../assets/img/hero-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+  padding: clamp(50px, 15rem, 12vw) 0;
+
+  &__content {
+    @extend %flex-column;
+    gap: var(--main-offset);
+    width: 70vw;
+    max-width: 900px;
+    container: hero-content / inline-size;
+
+    @container base-section (max-width: 440px) {
+      width: 100%;
+    }
+
+    @container hero-content (max-width: 460px) {
+      .btn-row * {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  }
+
+  .base-subtitle,
+  .base-text,
+  .base-title {
+    @extend %text-shadow;
+  }
+}
