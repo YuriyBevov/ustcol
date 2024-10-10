@@ -1,0 +1,8 @@
+.title-block {
+  @extend %flex-column;
+  gap: var(--main-offset);
+
+  .base-text {
+    margin: 0;
+  }
+}

@@ -1,0 +1,16 @@
+extends ../../layouts/base-section/base-section
+
+block variables
+  - _cls = 'contacts'
+  - _id = ''
+
+
+block content
+  include ../../components/title-block/title-block
+  include ../../components/btn-row-block/btn-row-block
+
+  +title-block({
+    overtext: 'Связаться с нами',
+    title: 'Наши контакты'
+  })
+

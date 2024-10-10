@@ -1,14 +1,14 @@
-include ../components/base-title
-include ../components/btn-row
+include ../../components/btn-row-block/btn-row-block
+include ../../components/title-block/title-block
 
 section.base-section.hero
   .container
     .hero__content
-      +base-title({
-        overTitleText: 'Коллегия адвокатов',
-        title: 'Добро пожаловать в коллегию адвокатов “ЮСТИКОМ”'
+      +title-block({
+        overtext: 'Коллегия адвокатов',
+        title: 'Добро пожаловать в коллегию адвокатов “ЮСТИКОМ”',
+        titleTag: 'h1'
       })
-
       p.base-text.base-text--lg Когда важна каждая деталь.
 
       +btn-row([

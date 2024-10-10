@@ -1,0 +1,19 @@
+block variables
+  -
+    const title = "Коллегия адвокатов Юстиком"
+    const description = ""
+    const keywords = ""
+    const styles = ['inner']
+
+include ./pug/layouts/main-layout
+
+main
+  block content
+    .template-block
+      .container(style="display:flex;flex-direction:column;gap:20px;")
+        p.base-title base-title
+        p.base-text base-text
+        p.base-text.base-text--lg base-text--lg
+        p.base-text.base-text--lined base-text--lined
+
+

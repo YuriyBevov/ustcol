@@ -1,0 +1,5 @@
+mixin title-block(data)
+  .title-block
+    if data.overtext
+      span.base-text.base-text--lined!= data.overtext
+    #{data.titleTag ? data.titleTag : 'h2'}.base-title!= data.title

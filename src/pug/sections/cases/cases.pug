@@ -1,0 +1,15 @@
+extends ../../layouts/base-section/base-section
+
+block variables
+  - _cls = 'cases'
+  - _id = ''
+
+
+block content
+  include ../../components/title-block/title-block
+  include ../../components/btn-row-block/btn-row-block
+
+  +title-block({
+    overtext: 'Успешная практика',
+    title: 'Наши кейсы'
+  })

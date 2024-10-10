@@ -1,0 +1,7 @@
+.btn-row {
+  @extend %flex-wrap;
+
+  * {
+    flex-grow: 1;
+  }
+}

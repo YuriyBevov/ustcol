@@ -26,7 +26,8 @@
 
   .base-subtitle,
   .base-text,
-  .base-title {
+  .base-title,
+  .base-text--lined::after {
     @extend %text-shadow;
   }
 }

@@ -2,6 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  @extend %scrollbar;
 }
 
 html,
@@ -35,6 +36,40 @@ body {
   overflow-x: hidden !important;
   -webkit-font-smoothing: antialiased;
   scrollbar-gutter: stable;
+
+  &.body-locked {
+    overflow: hidden;
+  }
+}
+
+footer {
+  margin-top: auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--site-base-text-color);
+}
+
+a[href='tel:*'] {
+  white-space: nowrap;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+.hidden {
+  display: none !important;
+}
+
+picture {
+  display: flex;
 }
 
 

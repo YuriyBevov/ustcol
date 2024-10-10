@@ -1,5 +1,5 @@
-//imports
-@import "./_extends/main.scss";
-
+@import './_base/main';
+@import './_vars/scoped';
 // blocks
-@import "./blocks/hero.scss";
+@import "../pug/sections/hero/hero";
+@import "../pug/sections/about/about";
