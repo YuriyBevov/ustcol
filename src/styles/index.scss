@@ -1,5 +1,8 @@
-@import './_base/main';
 @import './_vars/scoped';
+@import './template';
+
 // blocks
 @import "../pug/sections/hero/hero";
 @import "../pug/sections/about/about";
+@import "../pug/sections/stuff/stuff";
+@import "../pug/sections/licenses/licenses";

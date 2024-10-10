@@ -1,0 +1,17 @@
+include ../../cards/stuff-card/stuff-card
+
+mixin main-slider(slides)
+  .swiper.main-slider
+    .swiper-wrapper
+      each slide in slides
+        .swiper-slide
+          if slide.type == 'stuff-card'
+            +stuff-card(slide.data)
+          else
+            != slide
+    .swiper-controls
+      .swiper-pagination
+      .swiper-navigation
+        button.swiper-button-prev
+        button.swiper-button-next
+

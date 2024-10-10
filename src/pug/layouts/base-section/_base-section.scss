@@ -1,4 +1,8 @@
 .base-section {
   container: base-section / inline-size;
   padding: clamp(30px, 5vw, 100px) 0;
+
+  &__content {
+    padding: clamp(30px, 3vw, 70px) 0;
+  }
 }

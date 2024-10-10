@@ -9,6 +9,11 @@
   justify-content: center;
 }
 
+%flex-align {
+  display: flex;
+  align-items: center;
+}
+
 %flex-wrap {
   display: flex;
   flex-wrap: wrap;

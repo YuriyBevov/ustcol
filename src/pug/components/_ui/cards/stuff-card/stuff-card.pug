@@ -1,0 +1,12 @@
+mixin stuff-card(data)
+  .stuff-card
+    img(src=`../assets/img/${data.img.path}` alt= data.img.alt ? data.img.alt : data.name width="400" height="300")
+    .stuff-card__content
+      span.stuff-card__content-title!= data.name
+      span.stuff-card__content-subtitle!= data.role
+      span.stuff-card__content-text!= data.text
+
+    a(href="#").stuff-card__detail
+      span Подробнее об адвокате
+      svg(width='20' height='20' role='img' aria-hidden='true' focusable='false')
+        use(xlink:href='./__spritemap#sprite-arrow-right')
