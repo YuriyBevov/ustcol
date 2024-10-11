@@ -1,0 +1,21 @@
+include ../../detail-link/detail-link
+mixin case-lg-card(data)
+  .case-card
+    .case-card__grid
+      .case-card__grid-item
+        span.base-text.base-text--lg.case-card__grid-item-title!= data.title
+        .case-card__table
+          .case-card__table-row
+            .case-card__table-row-data.base-text № дела:
+            .case-card__table-row-data.base-text!= data.сase.number
+          .case-card__table-row
+            .case-card__table-row-data.base-text Суть дела:
+            .case-card__table-row-data.base-text!= data.сase.subject
+          .case-card__table-row
+            .case-card__table-row-data.base-text Результат:
+            .case-card__table-row-data.base-text!= data.сase.result
+        +detail-link({
+          text: 'Ссылка на дело'
+        })
+      .case-card__grid-item
+        img(src=`../assets/img/${data.img.path}.png` alt= data.title width='600' height='400')

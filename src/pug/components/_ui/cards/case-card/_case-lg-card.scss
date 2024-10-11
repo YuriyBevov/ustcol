@@ -1,0 +1,71 @@
+@import "../../../../../styles/_vars/scoped";
+
+.case-card {
+  padding: var(--main-offset) 0;
+  border-bottom: 1px solid var(--primary);
+
+  container: case-card / inline-size;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    gap: var(--main-offset);
+
+    @include container-down('base-section', $tablet-lg-width) {
+      grid-template-columns: 1fr;
+    }
+
+    &-item {
+      @extend %flex-column;
+      gap: 16px;
+      height: fit-content;
+
+      &-title {
+        font-weight: 700;
+      }
+
+      img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .detail-link {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__table {
+    @extend %flex-column;
+    gap: 16px;
+
+    &-row {
+      display: grid;
+      grid-template-columns: 100px auto;
+      gap: 10px 20px;
+
+      @include container-down('case-card', 440px) {
+        grid-template-columns: 1fr;
+      }
+
+      &-data {
+        font-weight: 400;
+
+        &:first-child {
+          color: var(--light);
+        }
+      }
+    }
+  }
+}
+
+* .case-card:first-of-type {
+  border-top: 1px solid var(--primary);
+}
+
+* .case-card:last-of-type + * {
+  margin-top: var(--main-offset);
+}
+
