@@ -41,7 +41,7 @@
 :root {
   --site-base-font-family: var(--primary-font);
   --site-base-font-weight: 400;
-  --site-base-font-size: 16px;
+  --site-base-font-size: clamp(16px, 2.2vw, 18px);
   --site-base-line-height: 1.25;
   --site-base-text-color: var(--dark);
   --site-bg-color: var(--white);

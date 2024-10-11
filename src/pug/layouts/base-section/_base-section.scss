@@ -5,4 +5,8 @@
   &__content {
     padding: clamp(30px, 3vw, 70px) 0;
   }
+
+  &--light {
+    background-color: var(--secondary);
+  }
 }

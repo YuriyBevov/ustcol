@@ -1,0 +1,16 @@
+@mixin sticky-block($width, $container: null, $top: 20px) {
+  position: sticky;
+  top: $top;
+
+  @if $container {
+    @container #{$container} (max-width: #{$width} ) {
+      position: static;
+      top: 0;
+    }
+  } @else {
+    @media (max-width: #{$width}) {
+      position: static;
+      top: 0;
+    }
+  }
+}

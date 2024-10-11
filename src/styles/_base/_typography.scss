@@ -13,7 +13,7 @@
   font-weight: 500;
 
   &--lg {
-    font-size: clamp(16px, 3vw, 24px);
+    font-size: clamp(16px, 2.2vw, 24px);
   }
 
   &--muted {
@@ -48,4 +48,8 @@
       }
     }
   }
+}
+
+.content-block {
+
 }

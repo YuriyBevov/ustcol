@@ -12,9 +12,8 @@
     &-item {
       @extend %flex-column;
       height: fit-content;
-      position: sticky;
-      top: 20px;
       gap: var(--main-offset);
+      @include sticky-block($tablet-lg-width, 'base-section');
     }
   }
 

@@ -1,0 +1,17 @@
+.infinity-slider {
+
+  .swiper-slide {
+    width: fit-content;
+    touch-action: none;
+
+    img {
+      width: 200;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  .swiper-wrapper{
+    transition-timing-function : linear;
+  }
+}

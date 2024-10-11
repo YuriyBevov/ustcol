@@ -1,0 +1,5 @@
+mixin detail-link(data)
+  a(href="#").detail-link
+    span!= data.text
+    svg(width='20' height='20' role='img' aria-hidden='true' focusable='false')
+      use(xlink:href='./__spritemap#sprite-arrow-right')

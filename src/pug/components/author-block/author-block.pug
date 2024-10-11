@@ -1,0 +1,8 @@
+mixin author-block(author)
+  .author-block
+    img(src=`../assets/img/${author.avatar}.png` alt= author.title width="48" height="48")
+
+
+    .author-block__content
+      span.base-text!= author.name
+      span.base-text!= author.date

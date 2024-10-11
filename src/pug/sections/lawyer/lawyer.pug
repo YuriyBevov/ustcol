@@ -1,0 +1,28 @@
+extends ../../layouts/base-section/base-section
+
+block variables
+  - _cls = 'lawyer base-section--light'
+  - _id = ''
+
+
+block content
+  include ../../components/_ui/main-btn/main-link
+  .lawyer__grid
+    .lawyer__grid-item
+      img(src="../assets/img/lawyer.png" alt="Ежедневник" width="680" height="480")
+    .lawyer__grid-item
+      +title-block({
+        overtext: 'Программа «Личный адвокат»',
+        title: 'Программа «Личный адвокат»'
+      })
+
+      .content-block
+        p Мы первыми создали программу абонентского юридического обслуживания «Личный адвокат» в 2004 году. За это время услугой воспользовались более 5000 человек.
+        strong 15 адвокатов на связи 24/7 для Вас и ваших близких 365 дней в году.
+        p Узнайте подробнее о том, как вы можете защитить себя и своих близких, воспользовавшись условиями программы «Личный адвокат».
+
+      +main-link({
+        href: '#',
+        cls: 'main-btn--outlined',
+        text: 'Подробнее о программе'
+      })

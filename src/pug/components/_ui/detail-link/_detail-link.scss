@@ -1,0 +1,13 @@
+.detail-link {
+  @extend %flex-align;
+  gap: 8px;
+  color: var(--primary);
+  font-size: clamp(16px, 2.2vw, 18px);
+  font-weight: 600;
+  width: fit-content;
+  margin-top: auto;
+
+  svg {
+    fill: var(--primary);
+  }
+}

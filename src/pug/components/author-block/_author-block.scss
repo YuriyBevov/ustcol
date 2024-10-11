@@ -1,0 +1,31 @@
+.author-block {
+  position: relative;
+  display: grid;
+  grid-template-columns: 48px auto;
+  gap: 12px;
+  align-items: center;
+
+  img {
+    width: 48px;
+    height: auto;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+  }
+
+  &__content {
+    @extend %flex-column;
+    gap: 2px;
+
+    span {
+      @include text-truncate(1);
+
+      &:first-child {
+        font-weight: 600;
+      }
+
+      &:last-child {
+        font-weight: 400;
+      }
+    }
+  }
+}
