@@ -1,5 +1,4 @@
 import Inspect from 'vite-plugin-inspect';
-import path from 'path';
 import vituum from 'vituum';
 import pug from '@vituum/vite-plugin-pug';
 import pages from 'vituum/plugins/pages.js';

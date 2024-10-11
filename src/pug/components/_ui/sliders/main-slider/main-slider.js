@@ -1,5 +1,7 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const sliders = document.querySelectorAll('.main-slider');
 
@@ -17,10 +19,11 @@ if(sliders.length) {
 
       pagination: {
         el: ".swiper-pagination",
+        dynamicBullets: true
       },
     });
   });
 }
 
-import 'swiper/css';
+
 

@@ -15,6 +15,9 @@ export default {
     }),
     purgecss({
       content: ['./**/*.html', './**/*.pug'],
+      safelist: {
+        deep: [/^swiper/],
+      }
     }),
     // always after postcssSortMediaQueries
     postcssCombineDuplicatedSelectors({

@@ -9,21 +9,31 @@
     @extend %flex-align;
     gap: 16px;
     justify-content: space-between;
-    padding: clamp(30px, 3vw, 70px) 0 16px;
+    padding: clamp(25px, 3vw, 50px) 0 16px;
+    margin: 5px;
 
-    // .swiper-pagination {
-    //   &-bullet {
-    //     display: block;
-    //     width: 8px;
-    //     height: 8px;
-    //     background-color: var(--dark);
-    //     border-radius: 50%;
-    //   }
-    // }
+    .swiper-pagination {
+      position: static;
+      transform: none !important;
+
+      &-bullet {
+        width: 8px;
+        height: 8px;
+        background-color: var(--dark);
+      }
+    }
 
     .swiper-navigation {
       @extend %flex-align;
       gap: 16px;
+
+      .swiper-button-lock {
+        display: none;
+      }
+
+      .swiper-button-disabled {
+        opacity: .5;
+      }
 
       .swiper-button-prev,
       .swiper-button-next {
