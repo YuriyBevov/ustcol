@@ -7,18 +7,22 @@ const sliders = document.querySelectorAll('.main-slider');
 
 if(sliders.length) {
   sliders.forEach((slider) => {
+    const pagination = slider.querySelector('.swiper-pagination');
+    const btnNext = slider.querySelector('.swiper-button-next');
+    const btnPrev = slider.querySelector('.swiper-button-prev');
+
     new Swiper(slider, {
       modules: [Navigation, Pagination],
       slidesPerView: 'auto',
       spaceBetween: 30,
 
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: btnNext ? btnNext : null,
+        prevEl: btnPrev ? btnPrev : null,
       },
 
       pagination: {
-        el: ".swiper-pagination",
+        el: pagination ? pagination : null,
         dynamicBullets: true
       },
     });

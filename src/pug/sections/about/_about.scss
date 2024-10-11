@@ -5,7 +5,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: clamp(30px, 3vw, 50px) clamp(30px, 6vw, 100px);
 
-    @container base-section (max-width: 960px) {
+    @include container-down('base-section', $tablet-lg-width) {
       grid-template-columns: 1fr;
     }
 
@@ -32,7 +32,7 @@
       align-items: flex-start;
       gap: 16px;
 
-      @container about-list (max-width: 440px) {
+      @include container-down('about-list', 440px) {
         flex-direction: column;
       }
 

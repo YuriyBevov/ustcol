@@ -16,6 +16,10 @@
     font-size: clamp(16px, 3vw, 24px);
   }
 
+  &--muted {
+    color: var(--muted);
+  }
+
   &--lined {
     position: relative;
     display: flex;
@@ -38,8 +42,6 @@
       background-color: var(--primary);
       width: clamp(80px, 15vw, 180px);
       height: 2px;
-      filter: drop-shadow(0px -3px 4px #FFFFFF) drop-shadow(0px 0px 10px #FFFFFF);
-      box-shadow: 2px 2px 0px 0px #FFFFFF, 2px 2px 10px 2px #FFFFFF;
 
       @container base-section (max-width: 534px) {
         margin-top: 0;
