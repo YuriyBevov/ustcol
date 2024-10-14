@@ -1,7 +1,12 @@
 block variables
   - _cls = ''
   - _id = ''
+  - fluid = false
 
 section.base-section(class= _cls ? _cls : null id= _id ? _id : null)
-  .container
-    block content
+  if fluid
+    .container-fluid
+      block content
+  else
+    .container
+      block content

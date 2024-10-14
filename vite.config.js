@@ -14,8 +14,6 @@ export default defineConfig({
     pug(),
     imports({
       paths: [
-        // '/src/styles/*/**',
-        // '/src/js/*/**',
         '/src/assets/*/**'
       ]
     }),

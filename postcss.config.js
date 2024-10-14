@@ -16,7 +16,7 @@ export default {
     purgecss({
       content: ['./**/*.html', './**/*.pug'],
       safelist: {
-        deep: [/^swiper/],
+        deep: [/^swiper/, /^zoom/, /^ymaps-icon-content-layout-inner/],
       }
     }),
     // always after postcssSortMediaQueries
