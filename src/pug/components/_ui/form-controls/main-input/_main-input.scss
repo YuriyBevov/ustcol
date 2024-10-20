@@ -1,0 +1,45 @@
+.main-input-wrapper {
+  @extend %flex-column;
+  gap: 8px;
+
+  label {
+    @extend %label;
+  }
+
+  input {
+    padding: 10px 0;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid var(--primary);
+    font-size: clamp(16px, 2.2vw, 18px);
+    font-weight: 500;
+    color: var(--dark);
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active{
+        -webkit-box-shadow: 0 0 0 30px var(--secondary) inset !important;
+    }
+
+    &::placeholder {
+      font-size: clamp(16px, 2.2vw, 18px);
+      font-weight: 500;
+      color: var(--light);
+      width: 100%;
+    }
+
+    &.invalid {
+      color: var(--danger);
+
+      &::placeholder {
+        color: var(--danger);
+      }
+    }
+  }
+}
+
+

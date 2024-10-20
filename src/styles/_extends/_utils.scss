@@ -10,3 +10,10 @@
     border-radius: var(--scrollbar-thumb-border-radius);
   }
 }
+
+%label {
+  font-size: clamp(16px, 2.2vw, 18px);
+  font-weight: 700;
+  color: var(--dark);
+  cursor: pointer;
+}

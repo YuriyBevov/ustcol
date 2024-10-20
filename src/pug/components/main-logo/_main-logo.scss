@@ -1,0 +1,12 @@
+.main-logo {
+  @extend %flex-center;
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}

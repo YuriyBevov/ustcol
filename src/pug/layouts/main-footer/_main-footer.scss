@@ -1,0 +1,104 @@
+.footer {
+  border-top: 1px solid var(--primary);
+  container: footer / inline-size;
+
+  &__section {
+    padding: clamp(16px, 3vw,48px) 0;
+
+    &--bottom {
+      background-color: var(--primary);
+    }
+  }
+
+  &__main {
+    @extend %flex-center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--main-offset) 48px;
+
+    nav {
+      @include container-down('footer', $tablet-lg-width) {
+        order: 3;
+        width: 100%;
+        border-top: 1px solid var(--primary);
+        width: calc(100% + var(--container-offset)* 2);
+        margin: 0 calc(-1* var(--container-offset));
+        padding: clamp(24px, 3vw,48px) calc(var(--container-offset));
+
+      }
+
+      ul {
+        @extend %list-reset;
+        @extend %flex-wrap;
+        gap: 8px 20px;
+        align-items: center;
+
+        @include container-down('footer', $mobile-lg-width) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        li {
+          a {
+            @extend %flex-center;
+            @extend %main-hover;
+            padding: 12px 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px var(--main-offset);
+
+    @include container-down('footer', $tablet-width) {
+      grid-template-columns: 1fr;
+    }
+
+    &-item {
+      @extend %flex-column;
+      gap: 24px var(--main-offset);
+
+      &--row {
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        @include container-down('footer', $tablet-lg-width) {
+          flex-direction: column;
+        }
+      }
+
+      &-field {
+        @extend %flex-column;
+        gap: 6px;
+        flex-grow: 1;
+
+        .base-text:not(.base-text--muted) {
+          font-size: 14px;
+        }
+
+        a,
+        address {
+          color: var(--primary);
+          @extend %main-hover;
+        }
+      }
+    }
+  }
+
+  &__rights {
+    @extend %flex-center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--main-offset);
+    color: var(--white);
+
+    a {
+      color: var(--white);
+      @extend %main-hover;
+    }
+  }
+}

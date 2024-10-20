@@ -14,9 +14,9 @@ export default {
       sort: 'mobile-first', // mobile-first || desktop-first
     }),
     purgecss({
-      content: ['./**/*.html', './**/*.pug'],
+      content: ['./**/*.html', './**/*.pug', './**/*.css'],
       safelist: {
-        deep: [/^swiper/, /^zoom/, /^ymaps-icon-content-layout-inner/],
+        deep: [/^swiper/, /^zoom/, /^ymaps-icon-content-layout-inner/, /^fancybox/],
       }
     }),
     // always after postcssSortMediaQueries

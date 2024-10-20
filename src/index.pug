@@ -7,6 +7,8 @@ block variables
 
 include ./pug/layouts/main-layout
 
+include ./pug/layouts/main-header/main-header
+
 main
   block content
     include ./pug/sections/hero/hero
@@ -20,3 +22,7 @@ main
     include ./pug/sections/licenses/licenses
     include ./pug/sections/news/news
     include ./pug/sections/contacts/contacts
+
+include ./pug/layouts/main-footer/main-footer
+
+script(async="true" src="https://api-maps.yandex.ru/2.1/?apikey=e16eca43-c079-4eee-bcdb-fc2063125604&lang=ru_RU")

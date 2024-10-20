@@ -1,0 +1,46 @@
+.main-checkbox-wrapper {
+  label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+
+    font-size: clamp(16px, 2.2vw, 18px);
+    font-weight: 500;
+
+    span {
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    a {
+      font-weight: 600;
+      text-decoration: underline;
+      color: var(--primary);
+
+      @extend %main-hover;
+    }
+
+    &::before {
+      position: relative;
+      content: '';
+      width: 24px;
+      height: 24px;
+      aspect-ratio: 1/1;
+      border: 2px solid var(--primary);
+      border-radius: 4px;
+    }
+  }
+
+  input {
+    display: none;
+  }
+
+  &:has(input:checked) label::before {
+    background-image: url("../assets/img/icon-checkbox.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}

@@ -1,0 +1,80 @@
+include ../../components/_ui/main-btn/main-btn
+include ../../components/_ui/social/social
+include ../../components/_ui/nav/bottom-menu/bottom-menu
+
+footer.footer
+  .footer__section
+    .container
+      .footer__main
+        include ../../components/main-logo/main-logo
+
+        +bottom-menu(
+          {
+            items: [
+              {
+                name: 'Каталог услуг',
+                link: '#'
+              },
+              {
+                name: 'Практика',
+                link: '#'
+              },
+              {
+                name: 'Команда',
+                link: '#'
+              },
+              {
+                name: 'СМИ',
+                link: '#'
+              },
+              {
+                name: 'Контакты',
+                link: '#'
+              },
+
+            ]
+          }
+        )
+
+        +social([
+          {
+            link: "#",
+            icon: 'social-tg',
+            label: 'Telegram'
+          },
+          {
+            link: "#",
+            icon: 'social-whatsapp',
+            label: 'Whatsapp'
+          }
+        ])
+
+  .footer__section
+    .container
+      .footer__info
+        .footer__info-item
+          .footer__info-item-field
+            span.base-text.base-text--muted Юридическая информация
+            span.base-text Свидетельство о регистрации:  № 1157700020950 от 25 дек. 2015 г.
+            span.base-text КПП  770901001
+            span.base-text ОГРН  1157700020950
+            span.base-text ОКАТО  45286555000
+            span.base-text ОКПО  11262105
+        .footer__info-item.footer__info-item--row
+          .footer__info-item-field
+            span.base-text.base-text--muted Email
+            a(href="#").base-text test.info@gmail.com
+          .footer__info-item-field
+            span.base-text.base-text--muted Телефоны для связи
+            a(href="#").base-text +7 (999) 999 - 99 - 99
+            a(href="#").base-text +7 (999) 999 - 99 - 99
+          .footer__info-item-field
+            span.base-text.base-text--muted Адрес офиса
+            address.base-text 1-Тверская-Ямская ул, д. 123, кор.12, оф. 17
+
+  .footer__section.footer__section--bottom
+    .container
+      .footer__rights
+        span.base-text © 2024 «Usticom» Юридическое бюро
+        a(href="#").base-text Политика конфиденциальности
+        span.base-text Все права защищены

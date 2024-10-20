@@ -1,0 +1,26 @@
+.social {
+  &__list {
+    @extend %list-reset;
+    @extend %flex-align;
+    gap: 24px;
+
+    &-item {
+      @extend %flex-center;
+
+      a {
+        @extend %main-hover;
+        @extend %flex-center;
+        width: clamp(32px, 3vw, 40px);
+        min-width: 32px;
+        height: clamp(32px, 3vw, 40px);
+        aspect-ratio: 1/1;
+
+        & > * {
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}

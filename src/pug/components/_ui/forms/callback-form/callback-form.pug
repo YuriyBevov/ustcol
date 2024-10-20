@@ -1,0 +1,31 @@
+include ../../form-controls/main-input/main-input
+include ../../form-controls/main-checkbox/main-checkbox
+.callback-form
+  +title-block({
+    overtext: 'Бесплатная консультация',
+    title: 'Оставьте заявку и получите консультацию бесплатно!'
+  })
+  span.base-text Заполните форму ниже и наш специалист свяжется с вами в течение 24 часов для предоставления дополнительной информации или консультации. Мы гарантируем конфиденциальность ваших данных.
+
+  form(action="#" method="POST")
+    fieldset
+      +main-input({
+        label: 'Ваше имя',
+        id: 'user_name',
+        name: 'Имя',
+        placeholder: 'Иванов Иван Иванович'
+      })
+      +main-input({
+        label: 'Ваш номер',
+        id: 'user_phone',
+        name: 'Телефон',
+        placeholder: '+7(999)999-99-99'
+      })
+
+      input(type="submit" value="Оставить заявку").main-btn
+
+    +main-checkbox({
+      label: 'Нажимая кнопку “Оставить заявку” Вы даете согласие на <a href="#">обработку персональных данных.</a>',
+      id: 'user_accept',
+      name: 'Согласие на обработку персональных данных',
+    })
