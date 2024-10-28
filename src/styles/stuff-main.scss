@@ -1,0 +1,10 @@
+@import './_vars/scoped';
+@import './_base/main';
+@import './_mixins/main';
+@import './_extends/main';
+
+// blocks
+@import "@/pug/sections/stuff/stuff-main/stuff-main";
+
+@import "@pug/components/_ui/nav/bottom-menu/bottom-menu";
+@import "@pug/components/_ui/social/social";

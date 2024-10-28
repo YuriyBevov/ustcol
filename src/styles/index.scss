@@ -1,13 +1,20 @@
 @import './_vars/scoped';
-@import './template';
+@import './_base/main';
+@import './_mixins/main';
+@import './_extends/main';
 
 // blocks
-@import "../pug/sections/hero/hero";
-@import "../pug/sections/about/about";
-@import "../pug/sections/features/features";
-@import "../pug/sections/stuff/stuff";
-@import "../pug/sections/lawyer/lawyer";
-@import "../pug/sections/licenses/licenses";
-@import "../pug/sections/news/news";
-@import "../pug/sections/callback/callback";
-@import "../pug/sections/contacts/contacts";
+@import "@/pug/sections/index/hero/hero";
+@import "@/pug/sections/index/about/about";
+@import "@/pug/sections/index/features/features";
+@import "@/pug/sections/stuff/stuff-preview/stuff-preview";
+@import "@/pug/sections/cases/cases-preview/cases-preview";
+@import "@/pug/sections/lawyer/lawyer-preview/lawyer-preview";
+@import "@/pug/sections/index/partners/partners";
+@import "@/pug/sections/index/licenses/licenses";
+@import "@/pug/sections/news/news-preview/news-preview";
+// @import "@/pug/sections/common/callback/callback";
+// @import "@/pug/sections/common/contacts/contacts";
+
+// @import "@pug/components/_ui/nav/bottom-menu/bottom-menu";
+// @import "@pug/components/_ui/social/social";

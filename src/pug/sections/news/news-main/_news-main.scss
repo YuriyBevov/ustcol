@@ -1,0 +1,6 @@
+@import "@pug/components/catalog-section-list/catalog-section-list";
+@import "@pug/components/_ui/cards/news-preview-card/news-preview-card";
+
+.catalog-section-list .news-preview-card {
+  max-width: 100%;
+}

@@ -1,0 +1,90 @@
+.stuff-detail {
+  padding-bottom: 0;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: var(--main-offset);
+    margin-bottom: calc(var(--main-offset) * 2);
+
+    @include container-down('base-section', $tablet-lg-width) {
+      grid-template-columns: 1fr;
+    }
+
+    & > img {
+      width: 100%;
+      max-width: 720px;
+      height: auto;
+      object-fit: contain;
+      aspect-ratio: 4 / 3;
+      position: sticky;
+      top: var(--main-offset);
+
+      @include container-down('base-section', $tablet-lg-width) {
+        position: static;
+        top: 0;
+      }
+    }
+
+    &-main {
+      @extend %flex-column;
+      gap: 10px;
+    }
+  }
+
+  &__section {
+    @extend %flex-column;
+    gap: var(--main-offset);
+
+    &:not(:last-child) {
+      margin-bottom: calc(var(--main-offset) * 2);
+    }
+  }
+
+  .contacts-row {
+    margin-bottom: calc(var(--main-offset) * 1);
+
+    @include container-down('base-section', $tablet-width) {
+      flex-direction: column;
+    }
+  }
+
+  .btn-row {
+    margin-top: auto;
+
+    @include container-down('base-section', 440px) {
+      // justify-content: center;
+
+      .main-btn:first-child {
+        order: 2;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__list {
+    @extend %list-reset;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1140px;
+
+    @include container-down('base-section', $laptop-width) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include container-down('base-section', 660px) {
+      grid-template-columns: 1fr;
+    }
+
+    li {
+      @extend %flex-align;
+      gap: 16px;
+    }
+  }
+}
+
+@import "@pug/components/contacts-row-block/contacts-row";
+
+

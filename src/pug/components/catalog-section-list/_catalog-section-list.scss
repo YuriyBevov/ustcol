@@ -1,0 +1,20 @@
+.catalog-section-list {
+  @extend %list-reset;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--main-offset);
+  margin: calc(var(--main-offset) * 1.4) 0;
+
+  @include container-down('base-section', $desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include container-down('base-section', $tablet-lg-width) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include container-down('base-section', $mobile-lg-width) {
+    grid-template-columns: 1fr;
+  }
+}

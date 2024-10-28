@@ -1,0 +1,38 @@
+include ../../social/social
+
+mixin top-multilevel-menu(data)
+  nav.top-multilevel-menu
+    ul
+      each item in data.items
+        li
+          a(href= item.link)
+            span!= item.name
+
+            if item.inner
+              svg(width='24' height='24' role='img' aria-hidden='true' focusable='false')
+                use(xlink:href='./__spritemap#sprite-icon-chevron-down')
+
+              ul
+                each inner in item.inner
+                  li
+                    a(href="#")!= inner.title
+                    each item in inner.items
+                      a(href= item.link)
+                        span!= item.name
+
+    +social([
+      {
+        link: "#",
+        iconWhite: 'social-tg-white',
+        label: 'Telegram'
+      },
+      {
+        link: "#",
+        iconWhite: 'social-whatsapp-white',
+        label: 'Whatsapp'
+      }
+    ], false)
+
+    a(href="#").top-multilevel-menu__phone +7 (999) 999-99-99
+
+

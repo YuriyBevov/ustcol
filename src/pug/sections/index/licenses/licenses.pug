@@ -1,0 +1,26 @@
+extends ../../../layouts/base-section/base-section
+
+block variables
+  - _cls = 'licenses'
+  - _id = ''
+
+
+block content
+  include ../../../components/title-block/title-block
+  include ../../../components/btn-row-block/btn-row-block
+  include ../../../components/_ui/sliders/main-slider/main-slider
+
+  +title-block({
+    overtext: 'Лицензии и сертификаты',
+    title: 'Лицензии и сертификаты'
+  })
+  .base-section__content
+    +main-slider(
+      [
+        `<img src="./assets/img/license-mock.png" data-fancybox="licenses" alt="Лицезия" width="400" height="300">`,
+        `<img src="./assets/img/license-mock.png" data-fancybox="licenses" alt="Лицезия" width="400" height="300">`,
+        `<img src="./assets/img/license-mock.png" data-fancybox="licenses" alt="Лицезия" width="400" height="300">`,
+        `<img src="./assets/img/license-mock.png" data-fancybox="licenses" alt="Лицезия" width="400" height="300">`,
+        `<img src="./assets/img/license-mock.png" data-fancybox="licenses" alt="Лицезия" width="400" height="300">`,
+      ]
+    )

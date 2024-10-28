@@ -1,0 +1,34 @@
+extends ../../../layouts/base-section/base-section
+
+block variables
+  - _cls = 'contacts'
+  - _id = ''
+
+
+block content
+  include ../../../components/title-block/title-block
+  include ../../../components/btn-row-block/btn-row-block
+
+  +title-block({
+    overtext: 'Связаться с нами',
+    title: 'Наши контакты'
+  })
+
+  .base-section__content
+    .contacts__wrapper
+      .contacts__content
+        span.base-text.base-text--lined.contacts__content-title Контакты
+
+        .contacts__content-field
+          span.base-text.base-text--lg Email
+          a(href="mailto:test.info@gmail.com") test.info@gmail.com
+        .contacts__content-field
+          span.base-text.base-text--lg Телефоны для связи
+          a(href="tel:+79999999999") +7 (999) 999 - 99 - 99
+          a(href="tel:+79999999999") +7 (999) 999 - 99 - 99
+        .contacts__content-field
+          span.base-text.base-text--lg Адрес офиса
+          address 1-Тверская-Ямская ул, д. 123, кор.12, оф. 17
+
+      include ../../../components/_ui/yMaps/yMaps
+

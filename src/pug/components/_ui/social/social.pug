@@ -1,10 +1,11 @@
-mixin social(data)
+mixin social(data, bool)
   .social
     ul.social__list
-      li.social__list-item
-        a(href="tel:+79999999")
-          img(src=`../assets/img/social-phone.svg` alt="Телефон" width='40' height='40')
+      if bool != false
+        li.social__list-item
+          a(href="tel:+79999999")
+            img(src=`./assets/img/social-phone.svg` alt="Телефон" width='40' height='40')
       each social in data
         li.social__list-item
           a(href= social.link rel="nofollow norefferer noopener" target="_blank" aria-label= social.label)
-            img(src=`../assets/img/${social.icon}.svg` alt= social.label width='40' height='40')
+            img(src=`./assets/img/${social.iconWhite ? social.iconWhite : social.icon}.svg` alt= social.label width='40' height='40')

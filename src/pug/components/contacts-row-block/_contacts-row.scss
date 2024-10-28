@@ -1,0 +1,25 @@
+.contacts-row {
+  @extend %flex-wrap;
+  gap: var(--main-offset);
+
+  &__item {
+    @extend %flex-column;
+    gap: 2px;
+    padding-left: 60px;
+    position: relative;
+
+    & > svg {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      fill: var(--primary);
+    }
+
+    a {
+      @extend %main-hover;
+    }
+  }
+}

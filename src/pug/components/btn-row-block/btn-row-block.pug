@@ -8,3 +8,7 @@ mixin btn-row(data)
         +main-btn(item)
       if item.type == "link"
         +main-link(item)
+      if item.type == "social"
+        a(href!= item.href aria-label!= item.label).main-btn.main-btn--outlined.main-btn--fit.main-btn--iconed
+          svg(width='40' height='40' role='img' aria-hidden='true' focusable='false')
+            use(xlink:href=`./__spritemap#sprite-${item.icon}`)

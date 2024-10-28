@@ -1,4 +1,4 @@
-@mixin sticky-block($width, $container: null, $top: 20px) {
+@mixin sticky-block($width, $container: null, $top: 120px) {
   position: sticky;
   top: $top;
 

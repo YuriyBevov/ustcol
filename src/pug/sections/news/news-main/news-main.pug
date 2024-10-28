@@ -1,0 +1,17 @@
+extends ../../../layouts/base-section/base-section
+
+block variables
+  - _cls = ''
+  - _id = ''
+
+
+block content
+  include ../../../components/title-block/title-block
+  include ../../../components/catalog-section-list/catalog-section-list
+
+  +title-block({
+    overtext: 'Новости',
+    title: 'Новостной блог'
+  })
+
+  +catalog-section-list('news',[1,2,3,4,5])

@@ -5,13 +5,22 @@ import pages from 'vituum/plugins/pages.js';
 import imports from 'vituum/plugins/imports.js';
 import VitePluginSvgSpritemap from '@spiriit/vite-plugin-svg-spritemap';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+import { resolve } from 'path';
 import { defineConfig } from 'vite';
 
+import { getFileName } from './app.config';
+
+const MODE = process.env.NODE_ENV || 'development';
+// console.log('MODE: ', _MODE);
 export default defineConfig({
   plugins: [
     Inspect(),
     vituum(),
-    pug(),
+    pug({
+      options: {
+        pretty: true
+      }
+    }),
     imports({
       paths: [
         '/src/assets/*/**'
@@ -41,7 +50,7 @@ export default defineConfig({
     }),
     ViteImageOptimizer({
       test: /\.(jpe?g|png|svg)$/i,
-      includePublic: false,
+      includePublic: true,
       logStats: true,
       ansiColors: true,
       svg: {
@@ -87,22 +96,32 @@ export default defineConfig({
   ],
 
   css: {
-    outDir: '../dist/assets',
-    devSourcemap: true,
+    // outDir: '../dist/assets/styles',
+    // devSourcemap: true,
     preprocessorOptions: {
       scss: {
         api: 'modern-compiler' // or "modern"
       }
-    }
+    },
+    postcss: { cascade: true }
   },
 
   publicDir: 'public',
   root: './src',
   build: {
+    minify: false, // not for PUG
     outDir: '../dist',
+    emptyOutDir: true,
+    // cssCodeSplit: true,
     rollupOptions: {
-      input: ['index.pug', 'inner.pug']
-  }
+      input: [
+        '_bx-templates/**/*.{pug,html}',
+        '*.{pug,html}',
+			],
+			output: {
+				assetFileNames: getFileName,
+			},
+    }
   },
 
   base: './',
@@ -111,7 +130,10 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      // '@': path.resolve(__dirname, './src/assets'),
+      '@': resolve(__dirname, './src'),
+      '@assets': resolve(__dirname, './src/assets'),
+      '@styles': resolve(__dirname, './src/styles'), // Алиас из папки шаблонов для битрикса
+      '@pug': resolve(__dirname, './src/pug') // Алиас из папки шаблонов для битрикса
     }
   }
 });

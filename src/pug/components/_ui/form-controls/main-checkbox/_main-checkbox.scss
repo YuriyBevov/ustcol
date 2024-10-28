@@ -38,7 +38,7 @@
   }
 
   &:has(input:checked) label::before {
-    background-image: url("../assets/img/icon-checkbox.svg");
+    background-image: url("@/assets/img/icon-checkbox.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;

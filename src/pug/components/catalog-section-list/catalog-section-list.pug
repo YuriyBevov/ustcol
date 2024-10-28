@@ -1,0 +1,45 @@
+include ../_ui/cards/stuff-card/stuff-card
+include ../_ui/cards/news-preview-card/news-preview-card
+include ../_ui/cards/case-card/case-preview-card
+
+mixin catalog-section-list(type, count)
+  ul.catalog-section-list
+    each item in count
+      li.catalog-section-list__item
+        if type == "stuff"
+          +stuff-card({
+            img: {
+              path: 'stuff-mock-1.png',
+            },
+            name: 'Иванова Ольга',
+            role: 'Специалист в области семейного права, адвокат',
+            text: `
+              Стаж работы : 20 лет.<br>
+              Более 1 000 выигранных дел в своей отрасли.`
+          })
+
+        if type == "news"
+          +news-preview-card({
+            img: {
+              path: 'news-mock-1'
+            },
+            title: 'Обязанности работодателя по выплате заработной платы и предоставлению материальной помощи',
+            text: 'Трудовой кодекс Российской Федерации не обязывает работодателей выплачивать заработную плату раньше установленного в трудовом договоре срока, даже если возникают форс-мажорные обстоятельства.',
+            author: {
+              avatar: 'news-avatar-mock',
+              name: 'Иванов Иван Иванович',
+              date: '11 июля 2024',
+              readtime: '10 мин'
+            }
+          })
+
+        if type == "cases"
+          +case-preview-card({
+            img: {
+              path: 'news-mock-1'
+            },
+            title: 'Обязанности работодателя по выплате заработной платы и предоставлению материальной помощи',
+          })
+
+
+

@@ -1,0 +1,13 @@
+include ../../detail-link/detail-link
+
+mixin case-preview-card(data)
+  .case-preview-card
+    img(src=`./assets/img/${data.img.path}.png` alt= data.title width="600" height="400")
+
+    span.base-text.base-text--lg.case-preview-card__title!= data.title
+    if data.text
+      span.base-text.case-preview-card__text!= data.text
+
+    +detail-link({
+      text: 'Подробнее'
+    })

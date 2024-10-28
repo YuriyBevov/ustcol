@@ -1,0 +1,25 @@
+block variables
+  -
+    const title = "Коллегия адвокатов Юстиком"
+    const description = ""
+    const keywords = ""
+    const styles = ['./social-tpl']
+
+include ../../pug/layouts/main-layout
+
+main
+  block content
+    include ../../pug/components/_ui/social/social
+
+    +social([
+      {
+        link: "#",
+        icon: 'social-tg',
+        label: 'Telegram'
+      },
+      {
+        link: "#",
+        icon: 'social-whatsapp',
+        label: 'Whatsapp'
+      }
+    ])

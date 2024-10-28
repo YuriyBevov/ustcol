@@ -1,0 +1,21 @@
+extends ../../../layouts/base-section/base-section
+
+block variables
+  - _cls = 'callback base-section--light'
+  - _id = ''
+
+
+block content
+  include ../../../components/title-block/title-block
+  include ../../../components/btn-row-block/btn-row-block
+
+  .callback__grid
+    .callback__grid-item
+      include ../../../components/_ui/forms/callback-form/callback-form
+    .callback__grid-item
+      img(src="./assets/img/callback-img.png" alt="Консультация" width="330" height="420")
+    .callback__grid-item
+      .callback__banner
+        span.base-text.callback__banner-title 230+
+        span.base-text.callback__banner-text выигранных дел в суде нашей коллегией адвокатов
+

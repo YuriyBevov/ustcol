@@ -1,0 +1,42 @@
+.hero {
+  background-image: url("@assets/img/hero-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+  padding: clamp(50px, 15rem, 12vw) 0;
+
+  &__content {
+    @extend %flex-column;
+    gap: var(--main-offset);
+    width: 70vw;
+    max-width: 900px;
+    container: hero-content / inline-size;
+
+    @include container-down('base-section', $tablet-lg-width) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include container-down('hero-content', 460px) {
+      .btn-row * {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    @include container-down('base-section', 440px) {
+      width: 100%;
+    }
+  }
+
+  .base-subtitle,
+  .base-text,
+  .base-title,
+  .base-text--lined::after {
+    @extend %text-shadow;
+  }
+
+  .base-text--lined:after {
+    filter: drop-shadow(0px -3px 4px #FFFFFF) drop-shadow(0px 0px 10px #FFFFFF);
+    box-shadow: 2px 2px 0px 0px #FFFFFF, 2px 2px 10px 2px #FFFFFF;
+  }
+}

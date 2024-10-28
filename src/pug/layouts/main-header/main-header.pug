@@ -1,3 +1,80 @@
+include ../../components/_ui/nav/top-multilevel-menu/top-multilevel-menu
+include ../../components/_ui/social/social
+
 header.main-header
-  .container
-    include ../../components/main-logo/main-logo
+  .container.main-header__container
+    include ../../components/_ui/main-logo/main-logo
+
+    +top-multilevel-menu(
+      {
+        items: [
+          {
+            name: 'Услуги',
+            link: '#',
+            inner: [
+              {
+                title: 'Физическим лицам',
+                link: '#',
+                items: [
+                  {
+                    name: 'Физическим лицам 1',
+                    link: '#',
+                  },
+                  {
+                    name: 'Физическим лицам 2',
+                    link: '#',
+                  }
+                ]
+              },
+              {
+                title: 'Юридическим лицам',
+                link: '#',
+                items: [
+                  {
+                    name: 'Юридическим лицам 1',
+                    link: '#',
+                  },
+                  {
+                    name: 'Юридическим лицам 2',
+                    link: '#',
+                  }
+                ]
+              },
+            ]
+          },
+          {
+            name: 'Практика',
+            link: '#'
+          },
+          {
+            name: 'Команда',
+            link: '#'
+          },
+          {
+            name: 'СМИ',
+            link: '#'
+          },
+          {
+            name: 'Контакты',
+            link: '#'
+          },
+        ]
+      }
+    )
+
+    +social([
+      {
+        link: "#",
+        icon: 'social-tg',
+        label: 'Telegram'
+      },
+      {
+        link: "#",
+        icon: 'social-whatsapp',
+        label: 'Whatsapp'
+      }
+    ])
+
+    a(href="#").main-header__phone +7 (999) 999-99-99
+
+    include ../../components/_ui/burger/burger

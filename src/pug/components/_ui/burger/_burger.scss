@@ -1,0 +1,40 @@
+.burger {
+  @extend %btn-reset;
+  @extend %flex-column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 40px;
+  height: 40px;
+
+  &__line {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background-color: var(--muted);
+    transform-origin: left center;
+    transition: all 0.2s ease-in-out;
+    border-radius: 4px;
+  }
+
+  &.active {
+    .burger__line {
+      &--middle {
+        width: 0;
+        opacity: 0;
+      }
+
+      &--top {
+        transform: rotate(-45deg);
+        top: 25px;
+        left: 6px;
+      }
+
+      &--bottom {
+        transform: rotate(45deg);
+        top: -24px;
+        left: 6px;
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+extends ../../../layouts/base-section/base-section
+
+block variables
+  - _cls = 'news'
+  - _id = ''
+
+
+block content
+  include ../../../components/title-block/title-block
+  include ../../../components/_ui/main-btn/main-link
+  include ../../../components/_ui/cards/news-preview-card/news-preview-card
+
+  +title-block({
+    overtext: 'Оставайтесь в курсе последних событий',
+    title: 'Новостной блог'
+  })
+
+  .base-section__content
+    .news__grid
+      .news__grid-item
+        +news-preview-card({
+          img: {
+            path: 'news-mock-1'
+          },
+          title: 'Обязанности работодателя по выплате заработной платы и предоставлению материальной помощи',
+          text: 'Трудовой кодекс Российской Федерации не обязывает работодателей выплачивать заработную плату раньше установленного в трудовом договоре срока, даже если возникают форс-мажорные обстоятельства.',
+          author: {
+            avatar: 'news-avatar-mock',
+            name: 'Иванов Иван Иванович',
+            date: '11 июля 2024',
+            readtime: '10 мин'
+          }
+        })
+      .news__grid-item
+        +news-preview-card({
+          img: {
+            path: 'news-mock-1'
+          },
+          title: 'Обязанности работодателя по выплатам',
+          text: 'Трудовой кодекс Российской Федерации не обязывает работодателей выплачивать заработную плату раньше установленного в трудовом договоре срока, даже если возникают форс-мажорные обстоятельства.',
+          author: {
+            avatar: 'news-avatar-mock',
+            name: 'Константинов Константин Константинович',
+            date: '11 декабря 2024',
+            readtime: '30 мин'
+          }
+        })
+      .news__grid-item
+        +news-preview-card({
+          img: {
+            path: 'news-mock-1'
+          },
+          title: 'Обязанности работодателя по выплате заработной платы',
+          text: 'Трудовой кодекс Российской Федерации не обязывает работодателей выплачивать заработную плату раньше установленного в трудовом договоре срока, даже если возникают форс-мажорные обстоятельства.',
+          author: {
+            avatar: 'news-avatar-mock',
+            name: 'Ольга Иванова',
+            date: '30 сентября 2018',
+            readtime: '2 часа 30 мин'
+          }
+        })
+
+
+    +main-link(
+      {
+        href: "#",
+        cls: 'main-btn--outlined',
+        text: "Смотреть больше"
+      }
+    )
+
+

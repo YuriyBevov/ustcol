@@ -1,10 +1,12 @@
 // Общие стили для всего сайта
 @import './_base/main';
 
-@import "../pug/layouts/main-header/main-header";
+@import "@/pug/layouts/main-header/main-header";
+@import "@/pug/layouts/base-section/base-section";
+@import "@/pug/sections/common/callback/callback";
+@import "@/pug/sections/common/contacts/contacts";
+@import "@/pug/layouts/main-footer/main-footer";
+@import "@/pug/components/template-components";
 
-@import "../pug/layouts/base-section/base-section";
-@import "../pug/components/components";
-@import "../pug/components/components";
-
-@import "../pug/layouts/main-footer/main-footer";
+@import "@pug/components/_ui/nav/bottom-menu/bottom-menu";
+@import "@pug/components/_ui/social/social";

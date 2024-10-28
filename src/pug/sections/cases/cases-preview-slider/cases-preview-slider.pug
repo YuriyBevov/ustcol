@@ -1,0 +1,67 @@
+extends ../../../layouts/base-section/base-section
+
+block variables
+  - _cls = 'cases'
+  - _id = ''
+
+
+block content
+  include ../../../components/title-block/title-block
+  include ../../../components/_ui/sliders/main-slider/main-slider
+
+  +title-block({
+    title: 'Успешная практика'
+  })
+
+  .base-section__content
+    +main-slider(
+      [
+        {
+          type: 'case-preview-card',
+          data: {
+            img: {
+              path: 'news-mock-1'
+            },
+            title: 'Обязанности работодателя по выплате заработной платы и предоставлению материальной помощи',
+          }
+        },
+        {
+          type: 'case-preview-card',
+          data: {
+            img: {
+              path: 'news-mock-1'
+            },
+            title: 'Обязанности работодателя по выплате заработной платы и предоставлению материальной помощи',
+            text: 'Обязанности работодателя по выплате заработной платы и предоставлению материальной помощи',
+          }
+        },
+        {
+          type: 'case-preview-card',
+          data: {
+            img: {
+              path: 'news-mock-1'
+            },
+            title: 'Обязанности работодателя по выплате заработной платы и предоставлению материальной помощи',
+          }
+        },
+        {
+          type: 'case-preview-card',
+          data: {
+            img: {
+              path: 'news-mock-1'
+            },
+            title: 'Обязанности работодателя по выплате заработной платы и предоставлению материальной помощи',
+            text: 'Обязанности работодателя по выплате заработной платы и предоставлению материальной помощи',
+          }
+        },
+        {
+          type: 'case-preview-card',
+          data: {
+            img: {
+              path: 'news-mock-1'
+            },
+            title: 'Обязанности работодателя по выплате заработной платы и предоставлению материальной помощи',
+          }
+        },
+      ]
+    )

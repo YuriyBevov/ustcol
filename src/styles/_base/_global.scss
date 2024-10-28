@@ -3,7 +3,7 @@
 *::after {
   box-sizing: border-box;
   user-select: none;
-  @extend %scrollbar;
+  // @extend %scrollbar;
 }
 
 html,
@@ -15,6 +15,10 @@ body {
   min-height: 100dvh;
   text-size-adjust: none;
   scroll-behavior: smooth;
+}
+
+body.page-wrapper {
+  @extend %scrollbar;
 }
 
 html {

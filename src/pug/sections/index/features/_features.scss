@@ -1,0 +1,29 @@
+.features {
+  background-color: var(--secondary);
+  background-image: url("@assets/img/features-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  container: features / inline-size;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--main-offset);
+
+    @include container-down('features', $desktop-width) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include container-down('features', $tablet-width) {
+      grid-template-columns: 1fr;
+    }
+
+    &-item {
+      height: 100%;
+    }
+  }
+}
+
+@import "@pug/components/_ui/cards/feature-card/feature-card";

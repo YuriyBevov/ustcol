@@ -1,7 +1,7 @@
+
 #y-maps {
   width: 100%;
-  height: 30vw;
-  min-height: 320px;
+  height: 100%;
 
   .ymaps-icon-content-layout {
     &-inner {
@@ -30,6 +30,10 @@
     height: 40px;
     width: 100px;
 
+    @include container-down ('base-section', 480px) {
+      display: none;
+    }
+
     button {
       @extend %btn-reset;
       @extend %flex-center;
@@ -44,11 +48,11 @@
       background-position: center;
 
       &.zoom-btn-in {
-        background-image: url('../assets/images/icon-zoom-in.svg');
+        background-image: url('@/assets/img/icon-zoom-in.svg');
       }
 
       &.zoom-btn-out {
-        background-image: url('../assets/images/icon-zoom-out.svg');
+        background-image: url('@/assets/img/icon-zoom-out.svg');
       }
 
       &:active {

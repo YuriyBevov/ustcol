@@ -14,7 +14,7 @@ if(sliders.length) {
     new Swiper(slider, {
       modules: [Navigation, Pagination],
       slidesPerView: 'auto',
-      spaceBetween: 30,
+      spaceBetween: 20,
 
       navigation: {
         nextEl: btnNext ? btnNext : null,

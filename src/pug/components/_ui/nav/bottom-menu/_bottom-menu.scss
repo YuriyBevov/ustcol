@@ -1,0 +1,22 @@
+.bottom-menu {
+  ul {
+    @extend %list-reset;
+    @extend %flex-wrap;
+    gap: 8px 20px;
+    align-items: center;
+
+    @include media-down($mobile-lg-width) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0;
+    }
+
+    li {
+      a {
+        @extend %flex-center;
+        @extend %main-hover;
+        padding: 12px 0;
+      }
+    }
+  }
+}

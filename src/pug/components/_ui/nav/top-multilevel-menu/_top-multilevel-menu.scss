@@ -1,0 +1,44 @@
+.top-multilevel-menu {
+  &__phone,
+  .social {
+    display: none;
+
+    @include media-down($laptop-width) {
+      display: flex;
+    }
+  }
+
+  .social {
+    svg {
+      fill: var(--white);
+    }
+  }
+
+  &__phone {
+    font-weight: 600;
+    font-size: 16px;
+    @extend %main-hover;
+  }
+
+  ul {
+    @extend %list-reset;
+  }
+
+  & > ul {
+    @extend %flex-align;
+    gap: var(--main-offset);
+    width: 100%;
+
+    li > a {
+      @extend %flex-align;
+      gap: 8px;
+      font-size: 18px;
+      font-weight: 600;
+      @extend %main-hover;
+    }
+
+    ul {
+      display: none;
+    }
+  }
+}

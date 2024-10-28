@@ -1,0 +1,15 @@
+@import './_vars/scoped';
+@import './_base/main';
+@import './_mixins/main';
+@import './_extends/main';
+
+// blocks
+@import "@/pug/sections/stuff/stuff-detail/stuff-detail";
+
+@import "@/pug/sections/cases/cases-preview-slider/cases-preview-slider";
+@import "@/pug/sections/index/licenses/licenses";
+@import "@/pug/sections/news/news-preview-slider/news-preview-slider";
+@import "@/pug/sections/stuff/stuff-preview/stuff-preview";
+
+@import "@pug/components/_ui/nav/bottom-menu/bottom-menu";
+@import "@pug/components/_ui/social/social";

@@ -3,10 +3,12 @@ block variables
     const title = "Контакты"
     const description = ""
     const keywords = ""
-    const styles = ['contacts']
+    const styles = ['./styles/contacts']
 
 include ./pug/layouts/main-layout
 
 main
   block content
-    include ./pug/sections/contacts/contacts
+    include ./pug/sections/common/contacts/contacts
+
+  script(async="true" src="https://api-maps.yandex.ru/2.1/?apikey=e16eca43-c079-4eee-bcdb-fc2063125604&lang=ru_RU")

@@ -1,0 +1,6 @@
+@import "@pug/components/catalog-section-list/catalog-section-list";
+@import "@pug/components/_ui/cards/case-card/case-preview-card";
+
+.catalog-section-list .case-card {
+  max-width: 100%;
+}

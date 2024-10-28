@@ -1,0 +1,22 @@
+// .news {
+//   &__grid {
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     gap: var(--main-offset);
+
+//     @include container-down('base-section', $tablet-width) {
+//       grid-template-columns: 1fr;
+//     }
+
+//     &-item {
+//       height: 100%;
+//     }
+
+//     & + * {
+//       margin-top: calc(var(--main-offset) * 1.5);
+//     }
+//   }
+// }
+
+@import "@pug/components/author-block/author-block";
+@import "@pug/components/_ui/cards/news-preview-card/news-preview-card";

@@ -1,4 +1,7 @@
 include ../../cards/stuff-card/stuff-card
+include ../../cards/news-preview-card/news-preview-card
+include ../../cards/news-preview-card/news-preview-simple-card
+include ../../cards/case-card/case-preview-card
 
 mixin main-slider(slides)
   .swiper.main-slider
@@ -7,6 +10,12 @@ mixin main-slider(slides)
         .swiper-slide
           if slide.type == 'stuff-card'
             +stuff-card(slide.data)
+          else if slide.type == 'news-preview-card'
+            +news-preview-card(slide.data)
+          else if slide.type == 'news-preview-card-simple'
+            +news-preview-simple-card(slide.data)
+          else if slide.type == 'case-preview-card'
+            +case-preview-card(slide.data)
           else
             != slide
     .swiper-controls

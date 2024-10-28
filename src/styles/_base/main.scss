@@ -1,8 +1,9 @@
+@import "./fonts";
 @import "../_vars/root";
 @import "../_extends/main";
-@import "./fonts";
-@import "./animations";
+@import "./typography";
+@import "../_mixins/main"; // ?
 @import "./containers";
 @import "./global";
-@import "./typography";
-@import "../_mixins/main";
+@import "./animations";
+

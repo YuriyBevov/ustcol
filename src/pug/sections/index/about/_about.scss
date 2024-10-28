@@ -1,0 +1,21 @@
+.about {
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(30px, 3vw, 50px) clamp(30px, 6vw, 100px);
+
+    @include container-down('base-section', $tablet-lg-width) {
+      grid-template-columns: 1fr;
+    }
+
+    &-item {
+      @extend %flex-column;
+      height: fit-content;
+      gap: var(--main-offset);
+      @include sticky-block($tablet-lg-width, 'base-section');
+    }
+  }
+}
+
+

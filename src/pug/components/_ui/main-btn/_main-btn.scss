@@ -1,14 +1,15 @@
 .main-btn {
   @extend %btn-reset;
-  padding: 14px clamp(20px, 3vw, 32px);
+  padding: 12px clamp(20px, 3vw, 30px);
   font-size: clamp(16px, 3vw, 18px);
   font-weight: 700;
   width: fit-content;
   max-width: 320px;
+  min-height: 50px;
 
   &:not(.main-btn--outlined) {
     background-color: var(--primary);
-    border-color: var(--white);
+    border-color: var(--primary);
     color: var(--white);
     @extend %main-btn-hover;
   }
@@ -18,5 +19,31 @@
     border-color: var(--primary);
     color: var(--primary);
     @extend %main-btn-outlined-hover;
+  }
+
+  &--fit {
+    width: fit-content;
+    max-width: fit-content;
+  }
+
+  &--iconed {
+    padding: 0;
+    aspect-ratio: 1/1;
+
+    svg {
+      fill: var(--primary);
+
+      transition: fill var(--main-transition);
+    }
+
+    @media(hover: hover) {
+      &:hover svg {
+        fill: var(--white);
+      }
+    }
+
+    &:focus svg {
+      fill: var(--white);
+    }
   }
 }

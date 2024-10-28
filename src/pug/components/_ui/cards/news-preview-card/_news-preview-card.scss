@@ -1,0 +1,29 @@
+.news-preview-card {
+  @extend %flex-column;
+  gap: clamp(20px, 2.2px, 24px);
+  height: 100%;
+
+
+  & > img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/2;
+  }
+
+  &__title {
+    @include text-truncate(2);
+    font-weight: 700;
+  }
+
+  &__text {
+    @include text-truncate(3);
+    font-weight: 400;
+  }
+
+  &--bordered {
+    padding: 20px;
+    border: 1px solid var(--dark);
+  }
+}
+
+@import "@pug/components/author-block/author-block";

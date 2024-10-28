@@ -1,0 +1,26 @@
+extends ../../../layouts/base-section/base-section
+
+block variables
+  - _cls = 'case-detail'
+  - _id = ''
+
+
+block content
+  include ../../../components/title-block/title-block
+
+  .case-detail__content
+    img(src="@/assets/img/stuff-mock-1.png" alt="Константинов Константин Константинович" width="600" height="600")
+
+    .case-detail__content-side
+      +title-block({
+        overtext: 'Наши адвокаты',
+        title: 'Константинов Константин Константинович'
+      })
+
+      span.base-text.base-text--muted Адвокат, партнер. Заместитель Председателя Московской коллегии адвокатов
+      span.base-text
+        | Стаж юридической практики: 23 года <br>
+        | Регистрационный номер 50/6144 в реестре адвокатов Московской области.
+
+  p test
+

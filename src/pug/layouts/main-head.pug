@@ -5,9 +5,9 @@ mixin main-head(title, descriprion)
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
     title!= title
     meta(name="description" content!= descriprion)
-    link(rel="stylesheet" href="styles/template.scss")
+    //- link(rel="stylesheet" href="styles/template.scss")
     if styles
       each style in styles
-        link(rel="stylesheet" href!=`styles/${style}.scss`)
-    script(defer src=`js/main.js` type="module")
+        link(rel="stylesheet" href!=`${style}.scss`)
+    script(defer src=`/js/main.js` type="module")
 

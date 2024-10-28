@@ -1,0 +1,130 @@
+.main-header {
+  position: sticky;
+  top: 0;
+  box-shadow : 0px 4px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
+  z-index: 99;
+
+  .main-logo {
+    margin-right: auto;
+  }
+
+  &__container {
+    @extend %flex-align;
+    gap: var(--main-offset);
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: var(--white);
+    container: header / inline-size;
+
+    @include media-down($mobile-lg-width) {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    nav {
+      flex-grow: 1;
+      gap: 24px;
+
+      & > ul {
+        width: fit-content;
+        margin: 0 auto;
+
+      }
+
+      @include media-down($laptop-width) {
+        display: none;
+
+        position: fixed;
+        top: 0;
+        left: -100%;
+        flex-direction: column;
+
+        width: 100%;
+        max-width: 80vw;
+        max-width:80dvw;
+        height: 100%;
+        background-color: var(--primary);
+        z-index: -1;
+        padding: 100px var(--container-offset) 40px;
+        overflow-y: auto;
+
+        a {
+          color: var(--white);
+
+          svg {
+            display: none;
+          }
+        }
+
+        & > ul {
+          flex-direction: column;
+          align-items: flex-start;
+          margin: auto 0;
+          padding: 30px 0;
+
+          li a {
+            font-size: clamp(18px, 5vw, 36px) !important;
+          }
+        }
+      }
+    }
+
+    .social {
+      @include container-up('header', $desktop-width) {
+        &__list-item:first-child {
+          display: none;
+        }
+      }
+
+      @include container-down('header', $mobile-lg-width) {
+        display: none;
+      }
+    }
+  }
+
+  &__phone {
+    font-size: 24px;
+    font-weight: 600;
+    @extend %main-hover;
+
+    @include container-down('header', 1440px) {
+      display: none;
+    }
+  }
+
+  .burger {
+    display: none;
+    @include media-down($laptop-width) {
+      display: flex;
+    }
+  }
+
+  &:has(.burger.active) .top-multilevel-menu {
+    display: flex;
+    animation: showNav 0.3s ease-in forwards;
+  }
+}
+
+@keyframes showNav {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+
+main {
+  transition: filter .1s ease-in;
+}
+
+@include media-down($laptop-width) {
+  .main-header:has(.burger.active) + main {
+    filter: blur(3px);
+  }
+}
+
+
