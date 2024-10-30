@@ -1,4 +1,4 @@
-include ../_ui/cards/stuff-card/stuff-card
+include ../_ui/cards/employee-card/employee-card
 include ../_ui/cards/news-preview-card/news-preview-card
 include ../_ui/cards/case-card/case-preview-card
 
@@ -6,8 +6,8 @@ mixin catalog-section-list(type, count)
   ul.catalog-section-list
     each item in count
       li.catalog-section-list__item
-        if type == "stuff"
-          +stuff-card({
+        if type == "employee"
+          +employee-card({
             img: {
               path: 'stuff-mock-1.png',
             },

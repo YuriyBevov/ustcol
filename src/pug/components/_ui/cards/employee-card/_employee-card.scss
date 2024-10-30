@@ -1,4 +1,4 @@
-.stuff-card {
+.employee-card {
   @extend %flex-column;
   gap: 16px;
   width: 100%;
@@ -16,21 +16,21 @@
     @extend %flex-column;
     flex-grow: 1;
 
-    &-title {
+    & &-title {
 
       font-weight: 700;
       margin-bottom: 4px;
       @include text-truncate(2);
     }
 
-    &-subtitle {
+    & &-subtitle {
 
       margin-bottom: 16px;
       color: var(--light);
       @include text-truncate(3);
     }
 
-    &-text {
+    & &-text {
       margin-bottom: 8px;
 
       line-height: 1.5;

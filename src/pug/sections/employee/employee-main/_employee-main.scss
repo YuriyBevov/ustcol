@@ -1,0 +1,6 @@
+@import "@pug/components/catalog-section-list/catalog-section-list";
+@import "@pug/components/_ui/cards/employee-card/employee-card";
+
+.catalog-section-list .employee-card {
+  max-width: 100%;
+}

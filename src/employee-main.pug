@@ -3,19 +3,16 @@ block variables
     const title = "Коллегия адвокатов Юстиком"
     const description = ""
     const keywords = ""
-    const styles = ['./styles/template','./styles/stuff-detail']
+    const styles = ['./styles/template','./styles/employee-main']
 
 include ./pug/layouts/main-layout
 
 //- include ./pug/layouts/main-header/main-header
 
 main
+
   block content
-    include ./pug/sections/stuff/stuff-detail/stuff-detail
-    include ./pug/sections/cases/cases-preview-slider/cases-preview-slider
-    include ./pug/sections/index/licenses/licenses
-    include ./pug/sections/news/news-preview-slider/news-preview-slider
-    include ./pug/sections/stuff/stuff-preview/stuff-preview
+    include ./pug/sections/employee/employee-main/employee-main
     include ./pug/sections/common/callback/callback
     include ./pug/sections/common/contacts/contacts
 

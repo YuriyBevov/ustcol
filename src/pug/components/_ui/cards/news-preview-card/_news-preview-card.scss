@@ -10,12 +10,12 @@
     aspect-ratio: 3/2;
   }
 
-  &__title {
+  & &__title {
     @include text-truncate(2);
     font-weight: 700;
   }
 
-  &__text {
+  & &__text {
     @include text-truncate(3);
     font-weight: 400;
   }
@@ -25,5 +25,3 @@
     border: 1px solid var(--dark);
   }
 }
-
-@import "@pug/components/author-block/author-block";

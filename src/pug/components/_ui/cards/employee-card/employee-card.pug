@@ -1,0 +1,13 @@
+include ../../detail-link/detail-link
+
+mixin employee-card(data)
+  .employee-card
+    img(loading="lazy" src=`./assets/img/${data.img.path}` alt= data.img.alt ? data.img.alt : data.name width="400" height="300")
+    .employee-card__content
+      span.base-text.base-text--lg.employee-card__content-title!= data.name
+      span.base-text.employee-card__content-subtitle!= data.role
+      span.base-text.employee-card__content-text!= data.text
+
+    +detail-link({
+      text: 'Подробнее'
+    })

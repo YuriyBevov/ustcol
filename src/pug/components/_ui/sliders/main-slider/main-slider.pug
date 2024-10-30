@@ -1,4 +1,4 @@
-include ../../cards/stuff-card/stuff-card
+include ../../cards/employee-card/employee-card
 include ../../cards/news-preview-card/news-preview-card
 include ../../cards/news-preview-card/news-preview-simple-card
 include ../../cards/case-card/case-preview-card
@@ -8,8 +8,8 @@ mixin main-slider(slides)
     .swiper-wrapper
       each slide in slides
         .swiper-slide
-          if slide.type == 'stuff-card'
-            +stuff-card(slide.data)
+          if slide.type == 'employee-card'
+            +employee-card(slide.data)
           else if slide.type == 'news-preview-card'
             +news-preview-card(slide.data)
           else if slide.type == 'news-preview-card-simple'

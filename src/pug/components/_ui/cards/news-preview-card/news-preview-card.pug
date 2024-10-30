@@ -1,5 +1,4 @@
 include ../../detail-link/detail-link
-include ../../../author-block/author-block
 
 mixin news-preview-card(data)
   .news-preview-card
@@ -11,11 +10,3 @@ mixin news-preview-card(data)
     +detail-link({
       text: 'Читать далее'
     })
-
-    if data.author
-      +author-block({
-        avatar: data.author.avatar,
-        name: data.author.name,
-        date: data.author.date,
-        readtime: data.author.readtime
-      })

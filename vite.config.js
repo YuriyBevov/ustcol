@@ -132,8 +132,8 @@ export default defineConfig({
     alias: {
       '@': resolve(__dirname, './src'),
       '@assets': resolve(__dirname, './src/assets'),
-      '@styles': resolve(__dirname, './src/styles'), // Алиас из папки шаблонов для битрикса
-      '@pug': resolve(__dirname, './src/pug') // Алиас из папки шаблонов для битрикса
+      '@styles': resolve(__dirname, './src/styles'),
+      '@pug': resolve(__dirname, './src/pug')
     }
   }
 });
