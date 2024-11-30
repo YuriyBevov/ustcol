@@ -1,0 +1,21 @@
+.pagination
+  .pagination__field
+    span.pagination__item.pagination__item--count Показано: 1 - 1 из 3
+
+  .pagination__field
+    span.pagination__item.pagination__item--disabled.pagination__item--side В начало
+    .pagination__main
+      span.pagination__item.pagination__item--prev.pagination__item--disabled
+        svg(width='24' height='24' role='img' aria-hidden='true' focusable='false')
+          use(xlink:href='./__spritemap#sprite-arrow-right')
+      span.pagination__item.pagination__item--active.pagination__item--num 1
+      a(href="#").pagination__item.pagination__item--num 2
+      a(href="#").pagination__item.pagination__item--num 3
+      a(href="#").pagination__item.pagination__item--num 4
+      a(href="#").pagination__item.pagination__item--num 5
+
+      a(href="#").pagination__item.pagination__item--next
+        svg(width='24' height='24' role='img' aria-hidden='true' focusable='false')
+          use(xlink:href='./__spritemap#sprite-arrow-right')
+
+    a(href="#").pagination__item.pagination__item--side В конец

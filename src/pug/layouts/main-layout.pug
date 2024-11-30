@@ -5,7 +5,12 @@ doctype html
 block variables
 
 html(lang="ru")
-  +main-head(title, description)
-  body.page-wrapper
-    block content
+ +main-head(title, description)
 
+include ./main-header/main-header
+
+main
+  block content
+
+include ./main-footer/main-footer
+script(async="true" src="https://api-maps.yandex.ru/2.1/?apikey=e16eca43-c079-4eee-bcdb-fc2063125604&lang=ru_RU")

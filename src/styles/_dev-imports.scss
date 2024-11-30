@@ -1,0 +1,14 @@
+// Файл со всеми импортами, необходимыми для локальной сборки страницы, собранные в одном месте
+
+@import "@pug/components/_ui/nav/top-multilevel-menu/top-multilevel-menu";
+@import "@pug/components/_ui/cards/employee-card/employee-card";
+@import "@pug/components/_ui/pagination/pagination";
+@import "@pug/components/_ui/nav/bottom-menu/bottom-menu";
+@import "@pug/components/_ui/social/social";
+@import "@pug/components/price-block/price-block";
+@import "@/pug/sections/common/callback/callback";
+@import "@/pug/sections/cases/cases-preview-slider/cases-preview-slider";
+@import "@/pug/sections/index/licenses/licenses";
+@import "@/pug/sections/news/news-preview-slider/news-preview-slider";
+@import "@/pug/sections/employee/employee-preview/employee-preview";
+

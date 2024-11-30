@@ -18,6 +18,25 @@
   }
 }
 
+%primary-color-hover {
+  transition: color .3s ease-in-out;
+
+  @media(hover: hover) {
+    &:hover {
+      color: var(--primary);
+    }
+  }
+
+  &:focus {
+    color: var(--primary);
+  }
+
+  &:active {
+    color: var(--primary);
+    opacity: .4;
+  }
+}
+
 %main-btn-outlined-hover {
   transition: background-color var(--main-transition), color var(--main-transition), opacity var(--main-transition);
 

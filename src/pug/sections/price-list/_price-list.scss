@@ -1,0 +1,35 @@
+.price-list {
+  &__inner-list,
+  &__list {
+    @extend %list-reset;
+    margin: var(--main-offset) 0;
+  }
+
+  &__list {
+    & .base-title:not(.price-list__inner-list .base-title) {
+      position: relative;
+      font-size: clamp(22px, 3vw, 28px);
+      color: var(--primary);
+    }
+
+    & .title-block:not(.price-list__inner-list .title-block) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__list &__inner-list {
+    @extend %flex-column;
+    gap: 36px;
+    padding-left: clamp(20px, 3vw, 40px);
+    border-left: 1px solid var(--primary);
+
+    & .base-title {
+      color: var(--primary);
+      font-size: clamp(18px, 2.4vw, 22px);
+    }
+
+    & .title-block {
+      margin-bottom: 24px;
+    }
+  }
+}

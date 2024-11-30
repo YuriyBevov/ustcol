@@ -1,91 +1,95 @@
 extends ../../../layouts/base-section/base-section
 
 block variables
-  - _cls = 'stuff-detail'
+  - _cls = 'employee-detail'
   - _id = ''
 
 
 block content
   include ../../../components/title-block/title-block
-  include ../../../components/btn-row-block/btn-row-block
+  include ../../../components/_ui/main-btn/main-btn
   include ../../../components/_ui/lists/checked-list/checked-list
+  include ../../../components/_ui/sliders/main-slider/main-slider
 
-  .stuff-detail__content
-    img(src="./assets/img/stuff-mock-1.png" alt="Константинов Константин Константинович" width="600" height="600")
+  .base-section.employee-detail__header
+    img(src="./assets/img/stuff-mock-1.png" alt="Константинов Константин Константинович" width="600" height="450")
 
-    .stuff-detail__content-main
+    .employee-detail__header-content
       +title-block({
         overtext: 'Наши адвокаты',
         title: 'Константинов Константин Константинович'
       })
 
-      span.base-text.base-text--muted Адвокат, партнер. Заместитель Председателя Московской коллегии адвокатов
-      .content-block
-        p Стаж юридической практики: 23 года
-        p Регистрационный номер 50/6144 в реестре адвокатов Московской области.
+      .employee-detail__description
+        span.base-text.base-text--muted
+          | Адвокат, партнер. Заместитель Председателя Московской коллегии адвокатов
+        span.base-text
+          | Стаж юридической практики: 23 года <br>
+          | Регистрационный номер 50/6144 в реестре адвокатов Московской области.
 
-      include ../../../components/contacts-row-block/contacts-row
+      .employee-detail__contacts
+        a(href="#").employee-detail__contacts-item
+          svg(width='40' height='40' role='img' aria-hidden='true' focusable='false')
+            use(xlink:href='./__spritemap#sprite-phone')
+          span.base-text.base-text--muted Телефон
+          span.base-text +7 (906) 272-37-44
+        a(href="#").employee-detail__contacts-item
+          svg(width='40' height='40' role='img' aria-hidden='true' focusable='false')
+            use(xlink:href='./__spritemap#sprite-mail')
+          span.base-text.base-text--muted E-mail
+          span.base-text +7 (906) 272-37-44
+        a(href="#").employee-detail__contacts-item
+          svg(width='40' height='40' role='img' aria-hidden='true' focusable='false')
+            use(xlink:href='./__spritemap#sprite-whatsapp')
+          span.base-text Написать в Whatsapp
+        a(href="#").employee-detail__contacts-item
+          svg(width='40' height='40' role='img' aria-hidden='true' focusable='false')
+            use(xlink:href='./__spritemap#sprite-tg')
+          span.base-text Написать в Telegram
 
-      +btn-row([
+      +main-btn(
         {
-          type: 'button',
           text: 'Получить консультацию',
-          trigger: 'consult-modal'
-        },
-        {
-          type: 'social',
-          cls: 'main-btn--outlined',
-          href: '#',
-          label: 'Whatsapp',
-          icon: 'icon-whap-2'
-        },
-        {
-          type: 'social',
-          cls: 'main-btn--outlined',
-          href: '#',
-          label: 'Telegram',
-          icon: 'icon-tg-2'
-        },
+          trigger: 'consult-modal',
+          cls: 'employee-detail__btn'
+        }
+      )
+
+  .base-section
+    +title-block({
+      title: 'Специализация'
+    })
+    .base-section__content
+      ul.employee-detail__service-list
+        li
+          a(href="#")
+            img(src="./assets/img/stuff-list-icon-1.svg" alt="" width="40" height="40")
+            span.base-text Семейное право
+        li
+          a(href="#")
+            img(src="./assets/img/stuff-list-icon-2.svg" alt="" width="40" height="40")
+            span.base-text Защита имущественных прав
+        li
+          a(href="#")
+            img(src="./assets/img/stuff-list-icon-3.svg" alt="" width="40" height="40")
+            span.base-text Банкротство
+        li
+          a(href="#")
+            img(src="./assets/img/stuff-list-icon-4.svg" alt="" width="40" height="40")
+            span.base-text Наследственное право
+
+  .base-section
+    +title-block({
+      title: 'Образование, компетенции и карьера'
+    })
+
+    .base-section__content
+      +checked-list([
+        { text: '1995 г. — Томский государственный университет (с отличием).'},
+        { text: '1997—1999 гг. — Российская школа частного права при Исследовательском Центре частного права при Президенте РФ (степень магистра частного права).'},
+        { text: '2009—2011 гг. — Стокгольмская школа экономики, курс General management (степень Master of Business Administration, диплом с отличием).'},
+        { text: '2012 г. — курс медиации в Университете Джорджа Вашингтона (Washington D.C., USA).'},
+        { text: '2016 г. — получен статус адвоката, член адвокатской палаты г. Москвы.'},
+        { text: '2017 г. — курсы медиаторов при Министерстве Юстиции Республики Италия (Рим, Италия).'},
+        { text: 'Свободно владеет английским языком.'}
       ])
-
-  .stuff-detail__section
-    span.base-title Специализация
-
-    ul.stuff-detail__list
-      li
-        img(src="./assets/img/stuff-list-icon-1.svg" alt="" width="40" height="40")
-        span.base-text Семейное право
-      li
-        img(src="./assets/img/stuff-list-icon-2.svg" alt="" width="40" height="40")
-        span.base-text Защита имущественных прав
-      li
-        img(src="./assets/img/stuff-list-icon-3.svg" alt="" width="40" height="40")
-        span.base-text Банкротство
-      li
-        img(src="./assets/img/stuff-list-icon-4.svg" alt="" width="40" height="40")
-        span.base-text Наследственное право
-      li
-        img(src="./assets/img/stuff-list-icon-5.svg" alt="" width="40" height="40")
-        span.base-text Защита чести и достоинства
-      li
-        img(src="./assets/img/stuff-list-icon-1.svg" alt="" width="40" height="40")
-        span.base-text Защита имущественных прав
-      li
-        img(src="./assets/img/stuff-list-icon-2.svg" alt="" width="40" height="40")
-        span.base-text Банкротство
-
-  .stuff-detail__section
-    span.base-title Образование, компетенции и карьера
-
-    +checked-list([
-      { text: '1995 г. — Томский государственный университет (с отличием).'},
-      { text: '1997—1999 гг. — Российская школа частного права при Исследовательском Центре частного права при Президенте РФ (степень магистра частного права).'},
-      { text: '2009—2011 гг. — Стокгольмская школа экономики, курс General management (степень Master of Business Administration, диплом с отличием).'},
-      { text: '2012 г. — курс медиации в Университете Джорджа Вашингтона (Washington D.C., USA).'},
-      { text: '2016 г. — получен статус адвоката, член адвокатской палаты г. Москвы.'},
-      { text: '2017 г. — курсы медиаторов при Министерстве Юстиции Республики Италия (Рим, Италия).'},
-      { text: 'Свободно владеет английским языком.'}
-    ])
-
-
-

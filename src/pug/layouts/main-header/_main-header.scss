@@ -4,71 +4,70 @@
   box-shadow : 0px 4px 4px rgba(0, 0, 0, 0.1);
   background-color: var(--white);
   z-index: 99;
+  min-height: 68px;
+  padding: 8px 0;
 
   .main-logo {
     margin-right: auto;
   }
 
-  &__container {
+  .main-header__container {
     @extend %flex-align;
     gap: var(--main-offset);
-    padding-top: 24px;
-    padding-bottom: 24px;
     background-color: var(--white);
     container: header / inline-size;
 
-    @include media-down($mobile-lg-width) {
-      padding-top: 16px;
-      padding-bottom: 16px;
-    }
+    // @include media-down($mobile-lg-width) {
+    //   padding-top: 16px;
+    //   padding-bottom: 16px;
+    // }
 
-    nav {
-      flex-grow: 1;
-      gap: 24px;
+    // nav {
+    //   flex-grow: 1;
+    //   gap: 24px;
 
-      & > ul {
-        width: fit-content;
-        margin: 0 auto;
+    //   & > ul {
+    //     width: fit-content;
+    //     margin: 0 auto;
 
-      }
+    //   }
 
-      @include media-down($laptop-width) {
-        display: none;
+    //   @include media-down($laptop-width) {
+    //     display: none;
+    //     position: fixed;
+    //     top: 0;
+    //     left: -100%;
+    //     flex-direction: column;
 
-        position: fixed;
-        top: 0;
-        left: -100%;
-        flex-direction: column;
+    //     width: 100%;
+    //     max-width: 80vw;
+    //     max-width:80dvw;
+    //     height: 100%;
+    //     background-color: var(--primary);
+    //     z-index: -1;
+    //     padding: 100px var(--container-offset) 40px;
+    //     overflow-y: auto;
 
-        width: 100%;
-        max-width: 80vw;
-        max-width:80dvw;
-        height: 100%;
-        background-color: var(--primary);
-        z-index: -1;
-        padding: 100px var(--container-offset) 40px;
-        overflow-y: auto;
+    //     a {
+    //       color: var(--white);
 
-        a {
-          color: var(--white);
+    //       svg {
+    //         display: none;
+    //       }
+    //     }
 
-          svg {
-            display: none;
-          }
-        }
+    //     & > ul {
+    //       flex-direction: column;
+    //       align-items: flex-start;
+    //       margin: auto 0;
+    //       padding: 30px 0;
 
-        & > ul {
-          flex-direction: column;
-          align-items: flex-start;
-          margin: auto 0;
-          padding: 30px 0;
-
-          li a {
-            font-size: clamp(18px, 5vw, 36px) !important;
-          }
-        }
-      }
-    }
+    //       li a {
+    //         font-size: clamp(18px, 5vw, 36px) !important;
+    //       }
+    //     }
+    //   }
+    // }
 
     .social {
       @include container-up('header', $desktop-width) {
@@ -84,8 +83,8 @@
   }
 
   &__phone {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 500;
     @extend %main-hover;
 
     @include container-down('header', 1440px) {

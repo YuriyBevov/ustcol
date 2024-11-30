@@ -1,0 +1,29 @@
+extends ../../layouts/base-section/base-section
+
+block variables
+  - _cls = 'price-list'
+  - _id = ''
+
+
+block content
+  include ../../components/title-block/title-block
+
+  +title-block({
+    overtext: 'Прайс-лист',
+    title: 'Прайс-лист',
+  })
+
+  ul.price-list__list
+    li
+      include ../../components/price-block/price-block
+
+    li
+      ul.price-list__inner-list
+        li
+          include ../../components/price-block/price-block
+
+    li
+      include ../../components/price-block/price-block
+      ul.price-list__inner-list
+        li
+          include ../../components/price-block/price-block

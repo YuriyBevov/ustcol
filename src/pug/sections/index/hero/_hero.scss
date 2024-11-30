@@ -3,9 +3,27 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top right;
-  padding: clamp(50px, 15rem, 12vw) 0;
+
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.1);
+    z-index: 0;
+  }
+
+  &.base-section {
+    padding: clamp(50px, 15rem, 12vw) 0;
+  }
 
   &__content {
+    position: relative;
+    z-index: 1;
     @extend %flex-column;
     gap: var(--main-offset);
     width: 70vw;

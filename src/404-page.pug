@@ -1,0 +1,13 @@
+extends ./pug/layouts/main-layout
+
+block variables
+  -
+    const title = "Коллегия адвокатов Юстиком"
+    const description = ""
+    const keywords = ""
+    const styles = ['./styles/template','./styles/404-page']
+
+block content
+  include ./pug/sections/common/404-page/404-page
+  include ./pug/sections/common/callback/callback
+  include ./pug/sections/common/contacts/contacts

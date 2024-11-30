@@ -3,7 +3,6 @@
 *::after {
   box-sizing: border-box;
   user-select: none;
-  // @extend %scrollbar;
 }
 
 html,
@@ -15,16 +14,13 @@ body {
   min-height: 100dvh;
   text-size-adjust: none;
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body.page-wrapper {
   @extend %scrollbar;
-}
-
-html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -74,6 +70,14 @@ address {
   display: none !important;
 }
 
-picture {
+picture,
+img {
   display: flex;
 }
+
+// .no-image {
+//   width: 100%;
+//   max-width: fit-content;
+//   margin: auto;
+// }
+

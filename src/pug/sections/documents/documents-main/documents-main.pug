@@ -1,0 +1,62 @@
+extends ../../../layouts/base-section/base-section
+
+block variables
+  - _cls = 'docs'
+  - _id = ''
+
+
+block content
+  include ../../../components/title-block/title-block
+  include ../../../components/_ui/accordeon/accordeon
+
+  +title-block({
+    overtext: 'Важные документы',
+    title: 'Формы документов для клиентов',
+  })
+
+  .base-section__content
+    +accordeon(
+      [
+        {
+          header: `
+            <span>Жалобы, заявления, обращения в прокуратуру <span class="color-accent">(4)</span></span>
+          `,
+          content: `
+              <a href="#" class="docs__item">
+                <svg width="40" height="40" role="img" aria-hidden="true" focusable="false">
+                  <use xlink:href='./__spritemap#sprite-file'></use>
+                </svg>
+                <span class="base-text">
+                  Документ
+                </span>
+                <svg width="24" height="24" role="img" aria-hidden="true" focusable="false">
+                  <use xlink:href='./__spritemap#sprite-icon-download'></use>
+                </svg>
+              </a>
+              <a href="#" class="docs__item">
+                <svg width="40" height="40" role="img" aria-hidden="true" focusable="false">
+                  <use xlink:href='./__spritemap#sprite-file'></use>
+                </svg>
+                <span class="base-text">
+                  Документ
+                </span>
+                <svg width="24" height="24" role="img" aria-hidden="true" focusable="false">
+                  <use xlink:href='./__spritemap#sprite-icon-download'></use>
+                </svg>
+              </a>
+            `,
+          cls: 'expanded'
+        },
+
+        {
+          header: 'Вопрос',
+          content: `
+              <div class="content-block">
+                <p>text p</p>
+                <span> text span</span>
+                <p>text p again</p>
+              </div>
+            `
+        }
+      ]
+    )

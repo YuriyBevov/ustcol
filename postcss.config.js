@@ -3,6 +3,7 @@ import postcssSortMediaQueries from 'postcss-sort-media-queries';
 import purgecss from'@fullhuman/postcss-purgecss';
 import postcssCombineDuplicatedSelectors from 'postcss-combine-duplicated-selectors';
 import postcssCalc from 'postcss-calc';
+import postcssDiscardComments from 'postcss-discard-comments';
 
 export default {
   plugins: [
@@ -16,12 +17,19 @@ export default {
     purgecss({
       content: ['./**/*.html', './**/*.pug', './**/*.css'],
       safelist: {
+        standard: [/no-image/],
         deep: [/^swiper/, /^zoom/, /^ymaps-icon-content-layout-inner/, /^fancybox/],
       }
     }),
     // always after postcssSortMediaQueries
     postcssCombineDuplicatedSelectors({
       removeDuplicatedValues: true
+    }),
+    postcssDiscardComments({
+      removeAll: true
     })
-  ]
+  ],
+  options: {
+    cascade: true
+  }
 }

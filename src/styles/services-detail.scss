@@ -1,0 +1,10 @@
+@import './_vars/scoped';
+@import './_base/main';
+@import './_mixins/main';
+@import './_extends/main';
+
+// blocks
+@import "@/pug/sections/services/services-detail/services-detail";
+
+@import "dev-imports";
+

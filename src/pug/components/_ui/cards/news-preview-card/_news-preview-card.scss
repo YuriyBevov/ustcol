@@ -6,8 +6,10 @@
 
   & > img {
     width: 100%;
+    // max-width: fit-content;
     height: auto;
     aspect-ratio: 3/2;
+    object-fit: cover
   }
 
   & &__title {

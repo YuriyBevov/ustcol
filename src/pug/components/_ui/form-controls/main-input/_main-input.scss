@@ -31,15 +31,17 @@
       color: var(--light);
       width: 100%;
     }
-
-    &.invalid {
-      color: var(--danger);
-
-      &::placeholder {
-        color: var(--danger);
-      }
-    }
   }
+
+  /* purgecss start ignore */
+  &.invalid-fld {
+    label {
+      color: var(--danger);
+    }
+
+    animation: shaker var(--main-transition);
+  }
+  /* purgecss end ignore */
 }
 
 

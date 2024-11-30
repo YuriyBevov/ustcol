@@ -1,0 +1,18 @@
+include ../_ui/main-btn/main-btn
+
+.price-block
+  span.base-title Стоимость услуг
+
+  ul.price-block__list
+    li.price-block__list-item
+      span.price-block__list-item-title Устная консультация
+      span.price-block__list-item-value от 125 000 руб.
+
+    li.price-block__list-item
+      span.base-text.price-block__list-item-title Анализ налогового кейса и разработка индивидуального плана по его решению
+      span.base-text.price-block__list-item-value от 5 000 руб.
+
+  +main-btn({
+    text: 'Получить консультацию',
+    cls: 'services-detail__offer-btn'
+  })

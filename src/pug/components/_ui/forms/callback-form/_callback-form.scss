@@ -27,3 +27,12 @@
     }
   }
 }
+
+/* purgecss start ignore */
+.callback-success {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(30px, 2.6vw, 50px);
+  margin: auto 0;
+}
+/* purgecss end ignore */

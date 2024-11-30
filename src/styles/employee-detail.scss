@@ -6,10 +6,4 @@
 // blocks
 @import "@/pug/sections/employee/employee-detail/employee-detail";
 
-@import "@/pug/sections/cases/cases-preview-slider/cases-preview-slider";
-@import "@/pug/sections/index/licenses/licenses";
-@import "@/pug/sections/news/news-preview-slider/news-preview-slider";
-@import "@/pug/sections/employee/employee-preview/employee-preview";
-
-@import "@pug/components/_ui/nav/bottom-menu/bottom-menu";
-@import "@pug/components/_ui/social/social";
+@import "dev-imports";

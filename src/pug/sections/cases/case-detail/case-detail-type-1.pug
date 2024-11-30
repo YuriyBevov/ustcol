@@ -1,0 +1,32 @@
+extends ../../../layouts/base-section/base-section
+
+block variables
+  - _cls = 'case-detail'
+  - _id = ''
+
+
+block content
+  include ../../../components/title-block/title-block
+
+  .case-detail__header
+    .case-detail__header-title
+      +title-block({
+        overtext: 'Практика',
+        title: 'Вместо установки коронок клиент получил длительный спор со стоматологической клиникой'
+      })
+    .case-detail__header-gallery
+      img(src="../assets/img/stuff-mock-1.png" alt="Константинов Константин Константинович" width="520" height="360")
+
+  .case-detail__content
+    .case-detail__content-field
+      span.base-text.case-detail__content-field-title № дела:
+      span.base-text № 2-155/18
+    .case-detail__content-field
+      span.base-text.case-detail__content-field-title Суть дела:
+      .content-block
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci asperiores libero laboriosam mollitia velit voluptate corporis architecto aperiam dicta sunt, cum perferendis, cupiditate facilis? Sunt fugiat quasi soluta consectetur.
+    .case-detail__content-field
+      span.base-text.case-detail__content-field-title Результат:
+      .content-block
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus non ipsam nostrum corrupti dignissimos exercitationem, laborum voluptates est assumenda aut itaque quae suscipit dolorem ab facere? Dicta eos nihil rerum!Incidunt nesciunt quis earum deleniti corporis nemo ut. Necessitatibus cumque, nesciunt iusto nostrum laudantium, totam enim aut ipsa obcaecati deleniti cum a velit vel illum nam suscipit fugit molestiae reiciendis?
+

@@ -1,0 +1,9 @@
+@import './_vars/scoped';
+@import './_base/main';
+@import './_mixins/main';
+@import './_extends/main';
+
+// blocks
+@import "@/pug/sections/cases/case-detail/case-detail";
+
+@import "dev-imports";

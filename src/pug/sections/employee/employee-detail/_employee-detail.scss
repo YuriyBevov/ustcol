@@ -1,11 +1,10 @@
 .employee-detail {
-  padding-bottom: 0;
+  padding: 0;
 
-  &__content {
+  &__header {
     display: grid;
     grid-template-columns: 2fr 3fr;
     gap: var(--main-offset);
-    margin-bottom: calc(var(--main-offset) * 2);
 
     @include container-down('base-section', $tablet-lg-width) {
       grid-template-columns: 1fr;
@@ -13,7 +12,7 @@
 
     & > img {
       width: 100%;
-      max-width: 720px;
+      max-width: 600px;
       height: auto;
       object-fit: contain;
       aspect-ratio: 4 / 3;
@@ -26,48 +25,55 @@
       }
     }
 
-    &-main {
+    &-content {
       @extend %flex-column;
       gap: 10px;
     }
   }
 
-  &__section {
+  &__description {
     @extend %flex-column;
-    gap: var(--main-offset);
+    gap: 20px 0;
 
-    &:not(:last-child) {
-      margin-bottom: calc(var(--main-offset) * 2);
+    span {
+      line-height: 1.5;
     }
   }
-
-  .contacts-row {
-    margin-bottom: calc(var(--main-offset) * 1);
-
-    @include container-down('base-section', $tablet-width) {
-      flex-direction: column;
-    }
-  }
-
-  .btn-row {
+  &__btn {
     margin-top: auto;
+  }
+  &__contacts {
+    @extend %flex-wrap;
+    gap: 10px мar(--main-offset);
+    margin: 10px 0;
 
-    @include container-down('base-section', 440px) {
-      // justify-content: center;
+    &-item {
+      position: relative;
+      @extend %flex-column;
+      justify-content: center;
+      width: fit-content;
+      min-height: 50px;
+      gap: 4px;
+      padding-left: 56px;
 
-      .main-btn:first-child {
-        order: 2;
-        width: 100%;
-        max-width: 100%;
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        fill: var(--primary);
       }
+
+      @extend %primary-color-hover;
     }
   }
-
-  &__list {
+  &__service-list {
     @extend %list-reset;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 20px var(--main-offset);
     max-width: 1140px;
 
     @include container-down('base-section', $laptop-width) {
@@ -79,12 +85,13 @@
     }
 
     li {
-      @extend %flex-align;
-      gap: 16px;
+      a {
+        @extend %flex-align;
+        height: 100%;
+        gap: 16px;
+
+        @extend %primary-color-hover;
+      }
     }
   }
 }
-
-@import "@pug/components/contacts-row-block/contacts-row";
-
-

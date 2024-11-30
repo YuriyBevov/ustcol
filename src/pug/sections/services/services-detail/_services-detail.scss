@@ -1,0 +1,19 @@
+.services-detail {
+  padding-bottom: 0;
+  .title-block {
+    margin-bottom: clamp(40px, 3.2vw, 70px);
+  }
+
+  &__field:not(:last-child),
+  .content-block {
+    margin-bottom: clamp(40px, 3.2vw, 70px);
+  }
+
+  & .base-section {
+    padding: 0;
+  }
+
+  & .base-section:has(.base-section__content) .title-block {
+    margin-bottom: 0;
+  }
+}

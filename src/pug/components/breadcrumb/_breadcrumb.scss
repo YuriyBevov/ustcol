@@ -1,0 +1,47 @@
+.breadcrumb {
+  padding: clamp(24px, 2.4vw, 40px) 0;
+
+  &__list {
+    @extend %list-reset;
+    @extend %flex-align;
+    gap: 10px;
+
+    @include media-down($tablet-width) {
+      display: none;
+    }
+
+    &-item {
+      display: flex;
+      span {
+        font-size: 14px;
+      }
+
+      & > span {
+        color: var(--primary);
+      }
+
+      a {
+        position: relative;
+        display: flex;
+        padding-right: 26px;
+        color: var(--light);
+
+        &::after {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          content: '';
+          width: 16px;
+          height: 2px;
+          background-color: var(--light);
+        }
+
+        @extend %primary-color-hover;
+      }
+    }
+  }
+
+  & + section {
+    padding-top: 0;
+  }
+}

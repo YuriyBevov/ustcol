@@ -1,0 +1,23 @@
+extends ../../../layouts/base-section/base-section
+
+block variables
+  - _cls = 'nf-page'
+  - _id = ''
+
+
+block content
+  include ../../../components/title-block/title-block
+  include ../../../components/_ui/main-btn/main-link
+
+  .nf-page__content
+    strong.base-text 404
+    h1.base-title Страница не найдена
+    p.base-text Страница, на которую вы пытаетесь попасть, не существует или была удалена.
+
+    +main-link(
+      {
+        text: 'Перейти на главную',
+        href: '#',
+      }
+    )
+

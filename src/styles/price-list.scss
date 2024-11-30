@@ -1,0 +1,14 @@
+@import './_vars/scoped';
+@import './_base/main';
+@import './_mixins/main';
+@import './_extends/main';
+
+// blocks
+@import "@/pug/sections/price-list/price-list";
+
+@import "dev-imports";
+
+.price-block .main-btn { // Чтобы не создавать миксин, пишу тут
+  display: none;
+}
+

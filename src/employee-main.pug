@@ -1,3 +1,5 @@
+extends ./pug/layouts/main-layout
+
 block variables
   -
     const title = "Коллегия адвокатов Юстиком"
@@ -5,17 +7,7 @@ block variables
     const keywords = ""
     const styles = ['./styles/template','./styles/employee-main']
 
-include ./pug/layouts/main-layout
-
-//- include ./pug/layouts/main-header/main-header
-
-main
-
-  block content
-    include ./pug/sections/employee/employee-main/employee-main
-    include ./pug/sections/common/callback/callback
-    include ./pug/sections/common/contacts/contacts
-
-include ./pug/layouts/main-footer/main-footer
-
-script(async="true" src="https://api-maps.yandex.ru/2.1/?apikey=e16eca43-c079-4eee-bcdb-fc2063125604&lang=ru_RU")
+block content
+  include ./pug/sections/employee/employee-main/employee-main
+  include ./pug/sections/common/callback/callback
+  include ./pug/sections/common/contacts/contacts

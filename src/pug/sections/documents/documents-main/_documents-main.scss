@@ -1,0 +1,25 @@
+.docs {
+  &__item {
+    @extend %flex-align;
+    justify-content: space-between;
+    gap: 16px;
+
+    svg:first-child {
+      min-width: 40px;
+      fill: var(--primary);
+    }
+
+    span {
+      display: inline-block;
+      font-weight: 700;
+      margin-right: auto;
+    }
+
+    svg:last-child {
+      min-width: 24px;
+      fill: var(--light);
+    }
+
+    @extend %main-hover;
+  }
+}

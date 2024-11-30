@@ -1,0 +1,48 @@
+.content-block {
+  @extend %flex-column;
+  gap: 20px;
+
+  *:not(li) {
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  p,
+  span,
+  a {
+    font-size: clamp(16px, 2.2vw, 18px);
+    font-weight: 400;
+  }
+
+  a {
+    @extend %main-hover;
+    color: var(--primary);
+  }
+
+  strong {
+    font-size: clamp(16px, 2.2vw, 18px);
+  }
+
+  blockquote {
+    @extend %flex-column;
+    gap: 4px;
+    position: relative;
+    padding: 20px;
+    padding-left: 40px;
+    margin: 0;
+    background-color: var(--warning);
+
+    &::before {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      content: '';
+      width: 2px;
+      height: calc(100% - 40px);
+      background-color: var(--primary);
+    }
+  }
+}

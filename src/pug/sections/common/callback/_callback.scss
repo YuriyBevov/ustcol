@@ -39,7 +39,7 @@
           height: 100%;
           object-fit: cover;
           object-position: bottom;
-          border-radius: 1000px 0 0;
+          border-radius: 100% 0 0;
         }
       }
 
@@ -78,14 +78,14 @@
       background-repeat: no-repeat;
     }
 
-    &-title {
+    & &-title {
       display: inline-block;
       font-size: 84px;
       font-weight: 700;
       margin-bottom: 30px;
     }
 
-    &-text {
+    & &-text {
       color: var(--gray);
       line-height: 1.5;
     }

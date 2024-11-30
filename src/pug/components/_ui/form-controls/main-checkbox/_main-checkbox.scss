@@ -43,4 +43,15 @@
     background-position: center;
     background-size: contain;
   }
+
+  /* purgecss start ignore */
+  &.invalid-fld {
+    label {
+      color: var(--danger);
+    }
+
+    animation: shaker var(--main-transition);
+  }
+  /* purgecss end ignore */
 }
+

@@ -6,6 +6,15 @@
   margin: 0;
 }
 
+.base-subtitle {
+  display: inline-block;
+  font-family: var(--secondary-font);
+  font-size: clamp(20px, 2.6vw, 32px);
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 1em;
+}
+
 .base-text {
   display: inline-block;
   margin: 0;
@@ -50,6 +59,6 @@
   }
 }
 
-.content-block {
-
+*.color-accent {
+  color: var(--primary);
 }

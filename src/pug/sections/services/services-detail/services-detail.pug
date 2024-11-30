@@ -1,0 +1,31 @@
+extends ../../../layouts/base-section/base-section
+
+block variables
+  - _cls = 'services-detail'
+  - _id = ''
+
+
+block content
+  include ../../../components/title-block/title-block
+  include ../../../components/_ui/main-btn/main-btn
+
+  +title-block({
+    overtext: 'Уголовное право',
+    title: 'Адвокат по уголовным делам',
+  })
+
+  .services-detail__field
+    span.base-subtitle Описание услуги
+    .content-block
+      p Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat. Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.
+
+  .services-detail__field
+    span.base-subtitle Преимущества
+    .content-block
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eius cum, corrupti, minus quaerat quod exercitationem beatae numquam architecto nam atque eos. Consectetur distinctio harum odit similique dignissimos, eum soluta?
+    ul.checked-list
+      li Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam maiores eaque quisquam laudantium harum nostrum nam error natus placeat sequi. Consequuntur blanditiis similique maiores veritatis quidem quo alias, magni ipsam?
+      li Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam maiores eaque quisquam laudantium harum nostrum nam error natus placeat sequi. Consequuntur blanditiis similique maiores veritatis quidem quo alias, magni ipsam?
+
+  .services-detail__field
+    include ../../../components/price-block/price-block

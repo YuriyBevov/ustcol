@@ -1,0 +1,77 @@
+extends ../../../layouts/base-section/base-section
+
+block variables
+  - _cls = 'services'
+  - _id = ''
+
+
+block content
+  include ../../../components/title-block/title-block
+  include ../../../components/catalog-section-list/catalog-section-list
+
+  +title-block({
+    overtext: 'Наши услуги',
+    title: 'Наши услуги',
+  })
+
+  ul.services__list
+    li
+      h2.services__list-title
+        a(href="#")
+          img(src="./assets/img/stuff-list-icon-1.svg" alt="Иконка" width="40" height="40")
+          | Раздел 1
+          img(src="./assets/img/icon-arrow.svg" alt="Подробнее" width="20" height="20")
+
+      ul.services__item-list
+        li
+          a(href="#") Элемент 1
+        li
+          a(href="#") Элемент 2
+    li
+      h2.services__list-title
+        a(href="#")
+          img(src="./assets/img/stuff-list-icon-2.svg" alt="Иконка" width="40" height="40")
+          | Раздел пустой
+
+    li
+      h2.services__list-title
+        a(href="#")
+          img(src="./assets/img/stuff-list-icon-2.svg" alt="Иконка" width="40" height="40")
+          | Раздел 2
+      ul.services__inner-list
+        li
+          h2.services__list-title
+            a(href="#") Подраздел
+          ul.services__item-list
+            li
+              a(href="#") элемент 1
+            li
+              a(href="#") элемент 2
+        li
+          h2.services__list-title
+            a(href="#") Подраздел
+          ul.services__item-list
+            li
+              a(href="#") элемент 1
+            li
+              a(href="#") элемент 2
+        li
+          h2.services__list-title
+            a(href="#") Подраздел
+          ul.services__item-list
+            li
+              a(href="#") элемент 1
+            li
+              a(href="#") элемент 2
+
+    li
+      h2.services__list-title
+        a(href="#")
+          img(src="./assets/img/stuff-list-icon-3.svg" alt="Иконка" width="40" height="40")
+          | Раздел 3
+      ul.services__item-list
+        each item in [1,2,3,4,5,6,7,8,9]
+          li
+            a(href="#") Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia magnam atque repellat consequatur dolore, omnis molestiae minima accusamus quae, architecto, repudiandae incidunt! Officia numquam facere accusamus? Accusantium magni non totam.
+          li
+            a(href="#") Элемент 2

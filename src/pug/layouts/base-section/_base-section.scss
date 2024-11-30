@@ -2,8 +2,17 @@
   container: base-section / inline-size;
   padding: clamp(30px, 5vw, 100px) 0;
 
+  &:not(section.base-section) {
+    padding-bottom: 0;
+  }
+
+  & .base-section:first-child {
+    padding-top: 0;
+  }
+
   &__content {
     padding-top: clamp(30px, 3vw, 70px);
+    padding-bottom: 5px;
   }
 
   &--light {

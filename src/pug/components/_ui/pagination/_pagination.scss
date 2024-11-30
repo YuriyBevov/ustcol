@@ -1,0 +1,91 @@
+.pagination {
+  @extend %flex-column;
+  gap: 6px;
+  container: pagination / inline-size;
+
+  &__field {
+    @extend %flex-align;
+    gap: 10px;
+
+    @include container-down('pagination', 640px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    @extend %flex-center;
+    padding: 6px;
+    width: fit-content;
+    min-width: 40px;
+    height: 40px;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+
+    &:not(.pagination__item--active):not(.pagination__item--disabled):not(.pagination__item--count) {
+      @extend %main-hover;
+    }
+
+    @include container-down('pagination', 375px) {
+      min-width: 32px;
+      height: 32px;
+    }
+
+    &--side {
+      min-width: 100px;
+
+      @include container-down('pagination', 640px) {
+        order: 2;
+      }
+    }
+
+    &--count {
+      border-color: transparent;
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--dark);
+      padding: 0;
+    }
+
+    &--prev,
+    &--next {
+      svg {
+        fill: var(--primary);
+      }
+    }
+
+    &--prev {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    &--disabled {
+      border-color: var(--light);
+      opacity: 0.5;
+      color: var(--light);
+
+      svg {
+        fill: var(--light);
+      }
+    }
+
+    &--active {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+  }
+
+  &__main {
+    @extend %flex-align;
+    gap: 10px;
+
+    @include container-down('pagination', 640px) {
+      width: 100%;
+    }
+
+    @include container-down('pagination', 375px) {
+      gap: 6px;
+    }
+  }
+}
+

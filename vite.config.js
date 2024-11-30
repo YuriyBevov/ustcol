@@ -96,14 +96,11 @@ export default defineConfig({
   ],
 
   css: {
-    // outDir: '../dist/assets/styles',
-    // devSourcemap: true,
     preprocessorOptions: {
       scss: {
         api: 'modern-compiler' // or "modern"
       }
     },
-    postcss: { cascade: true }
   },
 
   publicDir: 'public',

@@ -3,10 +3,9 @@
 
 @import "@/pug/layouts/main-header/main-header";
 @import "@/pug/layouts/base-section/base-section";
-@import "@/pug/sections/common/callback/callback";
 @import "@/pug/sections/common/contacts/contacts";
 @import "@/pug/layouts/main-footer/main-footer";
-@import "@/pug/components/template-components";
+@import "@pug/components/_ui/nav/bottom-menu/bottom-menu"; // убрать
+@import "@pug/components/_ui/social/social"; // убрать
 
-@import "@pug/components/_ui/nav/bottom-menu/bottom-menu";
-@import "@pug/components/_ui/social/social";
+@import "@/pug/components/template-components";
