@@ -2,7 +2,7 @@
   &__list {
     @extend %list-reset;
     @extend %flex-align;
-    gap: 16px;
+    gap: 6px;
 
     &-item {
       @extend %flex-center;
@@ -18,7 +18,7 @@
         & > * {
           width: 100%;
           height: auto;
-          max-width:32px;
+          max-width:28px;
           object-fit: contain;
         }
       }

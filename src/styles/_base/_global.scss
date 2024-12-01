@@ -19,6 +19,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body.page-wrapper {
   @extend %scrollbar;
 }

@@ -1,6 +1,7 @@
 $nav-collapse-width: 1240px;
 
 .main-header {
+  @extend %flex-align;
   position: sticky;
   top: 0;
   box-shadow : 0px 4px 4px rgba(0, 0, 0, 0.1);
@@ -9,6 +10,7 @@ $nav-collapse-width: 1240px;
   min-height: 68px;
 
   .main-logo {
+    position: relative;
     margin-right: auto;
   }
 
@@ -17,58 +19,6 @@ $nav-collapse-width: 1240px;
     gap: var(--main-offset);
     background-color: var(--white);
     container: header / inline-size;
-
-    // @include media-down($mobile-lg-width) {
-    //   padding-top: 16px;
-    //   padding-bottom: 16px;
-    // }
-
-    // nav {
-    //   flex-grow: 1;
-    //   gap: 24px;
-
-    //   & > ul {
-    //     width: fit-content;
-    //     margin: 0 auto;
-
-    //   }
-
-    //   @include media-down($laptop-width) {
-    //     display: none;
-    //     position: fixed;
-    //     top: 0;
-    //     left: -100%;
-    //     flex-direction: column;
-
-    //     width: 100%;
-    //     max-width: 80vw;
-    //     max-width:80dvw;
-    //     height: 100%;
-    //     background-color: var(--primary);
-    //     z-index: -1;
-    //     padding: 100px var(--container-offset) 40px;
-    //     overflow-y: auto;
-
-    //     a {
-    //       color: var(--white);
-
-    //       svg {
-    //         display: none;
-    //       }
-    //     }
-
-    //     & > ul {
-    //       flex-direction: column;
-    //       align-items: flex-start;
-    //       margin: auto 0;
-    //       padding: 30px 0;
-
-    //       li a {
-    //         font-size: clamp(18px, 5vw, 36px) !important;
-    //       }
-    //     }
-    //   }
-    // }
 
     .social {
       @include container-up('header', $desktop-width) {
