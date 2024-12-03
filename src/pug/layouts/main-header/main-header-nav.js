@@ -64,7 +64,7 @@ if (opener && nav) {
     closer.removeEventListener('click', closeNav);
     window.removeEventListener('keydown', onEscClickCloseNav);
 
-    body.style.overflow = 'auto';
+    body.style.overflow = '';
 
     document.querySelectorAll('.expanded').forEach(item => {
       item.classList.remove('expanded');
@@ -94,4 +94,14 @@ if (opener && nav) {
   }
 
   opener.addEventListener('click', onClickOpenNav);
+
+  window.addEventListener('resize', () => {
+    if(window.innerWidth > 1239) {
+      body.style.overflow = '';
+
+      nav.classList.contains('active')
+        ? nav.classList.remove('active')
+        : null;
+    }
+  });
 }

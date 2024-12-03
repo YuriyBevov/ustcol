@@ -23,6 +23,20 @@ if(innerItems.length) {
 window.addEventListener('keydown', (evt) => {
   if(evt.key === 'Enter' && evt.target.classList.contains('main-nav-item-expander')) {
     evt.preventDefault();
+    const active = document.querySelector('.top-multilevel-menu__list-item.expanded');
+
+    if(active) {
+      active.classList.remove('expanded');
+    }
+
     evt.target.closest('li').classList.toggle('expanded');
+  }
+});
+
+window.addEventListener('click', (evt) => {
+  if(!evt.target.classList.contains('top-multilevel-menu') && window.innerWidth > 1239) {
+    document.querySelectorAll('.expanded').forEach(item => {
+      item.classList.remove('expanded');
+    })
   }
 });
