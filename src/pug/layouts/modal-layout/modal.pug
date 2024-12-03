@@ -1,4 +1,7 @@
-.modal-overlay(id= modalID ? modalID : null class= modalClass ? modalClass : null)
-  .modal
-    .modal-wrapper
-      block content
+.modal(id= modalID ? modalID : null class= modalClass ? modalClass : null)
+  .modal-wrapper
+    button(aria-label="Закрыть").modal-closer.main-btn
+      svg(width='32' height='32' role='img' aria-hidden='true' focusable='false')
+        use(xlink:href='./__spritemap#sprite-close')
+    .modal-content
+      block modalContent

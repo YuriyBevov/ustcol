@@ -4,8 +4,8 @@ export class Modal {
   constructor(modal, options = {}) {
     (this.preventBodyLock = options.preventBodyLock ? true : false),
       (this.modal = modal);
-    this.overlay = this.modal.querySelector(".modal__overlay");
-    this.content = this.modal.querySelector(".modal__content");
+    this.overlay = this.modal;
+    this.content = this.modal.querySelector(".modal-content");
     this.close = this.modal.querySelector(".modal-closer");
 
     this.id = this.modal.getAttribute("id");
@@ -83,7 +83,7 @@ export class Modal {
         opener.removeEventListener("click", this.openModal);
       });
     }
-
+    console.log('listeners');
     document.addEventListener("click", this.closeByOverlayClick);
     document.addEventListener("keydown", this.closeByEscBtn);
 
@@ -99,6 +99,8 @@ export class Modal {
     if (this.close) {
       this.close.removeEventListener("click", this.closeByBtnClick);
     }
+
+    console.log('closed');
 
     this.modal.classList.remove('active');
 
@@ -129,6 +131,7 @@ export class Modal {
   };
 
   closeByOverlayClick = (evt) => {
+    console.log(evt.target, this.overlay);
     if (evt.target === this.overlay) {
       this.refresh();
     }
@@ -148,8 +151,10 @@ export class Modal {
     evt.preventDefault();
     this.bodyLocker(true);
 
-
+    console.log(this.modal, 'clicked');
     this.modal.classList.add('active');
+    this.addListeners();
+    this.focusTrap();
 
     // gsap.fromTo(
     //   this.modal,
@@ -193,6 +198,7 @@ export class Modal {
       this.isInited = true;
 
       this.openers.forEach((opener) => {
+        console.log(opener);
         opener.addEventListener("click", this.openModal);
       });
     } else {
