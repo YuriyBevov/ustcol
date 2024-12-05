@@ -4,7 +4,7 @@
   gap: 16px;
   font-size: clamp(16px, 2.2vw, 18px);
   font-weight: 500;
-  container: about-list / inline-size;
+  container: checked-list / inline-size;
 
   li {
     position: relative;
@@ -12,8 +12,9 @@
     gap: 16px;
     min-height: clamp(40px, 3vw, 60px);
 
-    @include container-down('about-list', 440px) {
+    @include container-down('checked-list', 440px) {
       flex-direction: column;
+      align-items: flex-start;
     }
 
     &::before {

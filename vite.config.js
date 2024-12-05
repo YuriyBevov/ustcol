@@ -106,7 +106,7 @@ export default defineConfig({
   publicDir: 'public',
   root: './src',
   build: {
-    minify: false, // not for PUG
+    minify: true, // not for PUG
     outDir: '../dist',
     emptyOutDir: true,
     // cssCodeSplit: true,

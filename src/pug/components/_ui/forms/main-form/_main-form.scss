@@ -1,9 +1,9 @@
-.callback-form {
+.main-form {
   @extend %flex-column;
   flex-grow: 1;
   gap: clamp(30px, 2.6px, 50px);
   max-width: 900px;
-  container: callback-form / inline-size;
+  container: main-form / inline-size;
 
   form {
     @extend %flex-column;
@@ -17,19 +17,27 @@
       align-items: end;
       gap: clamp(24px, 3vw, 50px);
 
-      @include container-down('callback-form', $tablet-width) {
+      @include container-down('main-form', $tablet-width) {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      @include container-down('callback-form', 440px) {
+      @include container-down('main-form', 440px) {
         grid-template-columns: 1fr;
       }
     }
   }
 }
 
+.modal .main-form {
+  & .title-block {
+    .base-title {
+      font-size: clamp(20px, 3vw, 36px);
+    }
+  }
+}
+
 /* purgecss start ignore */
-.callback-success {
+.main-form-success {
   display: flex;
   flex-direction: column;
   gap: clamp(30px, 2.6vw, 50px);

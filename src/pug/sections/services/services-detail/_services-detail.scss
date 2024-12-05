@@ -17,3 +17,51 @@
     margin-bottom: 0;
   }
 }
+
+.services-linked {
+  a {
+    @extend %primary-color-hover;
+  }
+
+  &__list {
+    @extend %list-reset;
+    @extend %flex-column;
+    gap: 24px;
+
+    &-item-title {
+      font-size: clamp(18px, 3vw, 24px);
+      font-weight: 500;
+      margin: 0;
+      @extend %flex-align;
+      gap: 24px;
+    }
+  }
+
+  &-element__list {
+    padding-left: 20px;
+    column-count: 3;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 1240px;
+
+    @include container-down('base-section', $laptop-width) {
+      column-count: 2;
+    }
+
+    @include container-down('base-section', $tablet-width) {
+      column-count: 1;
+    }
+
+    &-item {
+      list-style-type: disc;
+      margin-left: 20px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+
+      a {
+        display: flex;
+        padding: 10px 0;
+      }
+    }
+  }
+}

@@ -32,14 +32,13 @@
   .modal-wrapper {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 0;
+    transform: translate(0, -50%);
     @extend %flex-center;
     width: calc(100% - 60px);
-    max-width: 600px;
+    max-width: 900px;
     height: fit-content;
     max-height: 90vh;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 
   .modal-content {
@@ -52,8 +51,10 @@
     background-color: var(--white);
     visibility: hidden;
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateX(-100vw);
     transition: visibility .4s linear, opacity .4s linear, transform .4s linear;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 
   .modal-closer {

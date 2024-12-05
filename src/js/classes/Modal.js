@@ -83,7 +83,7 @@ export class Modal {
         opener.removeEventListener("click", this.openModal);
       });
     }
-    console.log('listeners');
+
     document.addEventListener("click", this.closeByOverlayClick);
     document.addEventListener("keydown", this.closeByEscBtn);
 
@@ -100,24 +100,7 @@ export class Modal {
       this.close.removeEventListener("click", this.closeByBtnClick);
     }
 
-    console.log('closed');
-
     this.modal.classList.remove('active');
-
-    // gsap.fromTo(
-    //   this.modal,
-    //   { display: "flex" },
-    //   {
-    //     opacity: 0,
-    //     duration: 0.6,
-    //     ease: "ease-in",
-    //     onComplete: () => {
-    //       this.modal.style.display = "none";
-    //       //если в модалке есть форма, при закрытии обнуляю поля
-    //       this.modal.querySelectorAll("form").forEach((f) => f.reset());
-    //     },
-    //   }
-    // );
 
     !this.preventBodyLock ? this.bodyLocker(false) : null;
 
@@ -131,7 +114,6 @@ export class Modal {
   };
 
   closeByOverlayClick = (evt) => {
-    console.log(evt.target, this.overlay);
     if (evt.target === this.overlay) {
       this.refresh();
     }
@@ -151,46 +133,9 @@ export class Modal {
     evt.preventDefault();
     this.bodyLocker(true);
 
-    console.log(this.modal, 'clicked');
     this.modal.classList.add('active');
     this.addListeners();
     this.focusTrap();
-
-    // gsap.fromTo(
-    //   this.modal,
-    //   { display: "none", opacity: 0 },
-    //   {
-    //     display: "flex",
-    //     opacity: 1,
-    //     duration: 0.6,
-    //     ease: "ease-in",
-    //     onComplete: () => {
-    //       this.addListeners();
-    //       this.focusTrap();
-    //     },
-    //   }
-    // );
-  };
-
-  show = () => {
-    this.isBodyLocked ? this.bodyLocker(true) : null;
-
-    this.modal.classList.add('active');
-
-    // gsap.fromTo(
-    //   this.modal,
-    //   { display: "none", opacity: 0 },
-    //   {
-    //     display: "flex",
-    //     opacity: 1,
-    //     duration: 0.6,
-    //     ease: "ease-in",
-    //     onComplete: () => {
-    //       this.addListeners();
-    //       this.focusTrap();
-    //     },
-    //   }
-    // );
   };
 
   init() {
@@ -198,7 +143,6 @@ export class Modal {
       this.isInited = true;
 
       this.openers.forEach((opener) => {
-        console.log(opener);
         opener.addEventListener("click", this.openModal);
       });
     } else {

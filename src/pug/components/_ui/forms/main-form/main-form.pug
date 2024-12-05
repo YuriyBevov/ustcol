@@ -1,5 +1,8 @@
 include ../../form-controls/main-input/main-input
 include ../../form-controls/main-checkbox/main-checkbox
+include ../../form-controls/main-textarea/main-textarea
+include ../../../title-block/title-block
+
 .main-form
   +title-block({
     overtext: 'Бесплатная консультация',
@@ -15,6 +18,7 @@ include ../../form-controls/main-checkbox/main-checkbox
         name: 'Имя',
         placeholder: 'Иванов Иван Иванович'
       })
+
       +main-input({
         label: 'Ваш номер',
         id: 'user_phone',
@@ -22,7 +26,14 @@ include ../../form-controls/main-checkbox/main-checkbox
         placeholder: '+7(999)999-99-99'
       })
 
-      input(type="submit" value="Оставить заявку").main-btn
+    +main-textarea({
+      label: 'Кратко опишите Вашу ситуацию',
+      id: 'user_text',
+      name: 'Сообщение',
+      placeholder: 'Место для описания'
+    })
+
+    input(type="submit" value="Оставить заявку").main-btn
 
     +main-checkbox({
       label: 'Нажимая кнопку “Оставить заявку” Вы даете согласие на <a href="#">обработку персональных данных.</a>',

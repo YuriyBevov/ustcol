@@ -10,9 +10,13 @@
     img:not(.swiper-slide img) {
       width: 100%;
       height: auto;
-      object-fit: contain;
+      object-fit: cover;
       object-position: left;
       max-height: 360px;
+
+      @include container-down('base-section', $tablet-lg-width) {
+        object-fit: contain;
+      }
     }
 
     @include container-down('base-section', $tablet-lg-width) {

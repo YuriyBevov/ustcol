@@ -2,7 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  user-select: none;
+  overscroll-behavior: contain;
 }
 
 html,
@@ -62,7 +62,8 @@ a[href='tel:*'] {
 
 a,
 button,
-[data-fancybox] {
+[data-fancybox],
+input[type="submit"] {
   cursor: pointer;
 }
 

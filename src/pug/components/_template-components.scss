@@ -6,10 +6,13 @@
 @import "./title-block/title-block";
 @import "./_ui/detail-link/detail-link";
 @import "./_ui/main-btn/main-btn";
-@import "./_ui/form-controls/main-input/main-input";
-@import "./_ui/form-controls/main-checkbox/main-checkbox";
 @import "./_ui/sliders/main-slider/main-slider";
 @import "./_ui/lists/checked-list/checked-list";
 @import "./_ui/accordeon/accordeon";
 @import "./content-block/content-block";
 @import "@pug/layouts/modal-layout/modal";
+// form && form-controls
+@import "@/pug/components/_ui/forms/main-form/main-form";
+@import "./_ui/form-controls/main-input/main-input";
+@import "./_ui/form-controls/main-checkbox/main-checkbox";
+@import "./_ui/form-controls/main-textarea/main-textarea";

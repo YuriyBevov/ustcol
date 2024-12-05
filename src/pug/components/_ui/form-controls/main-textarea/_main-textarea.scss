@@ -1,0 +1,50 @@
+.main-textarea-wrapper {
+  @extend %flex-column;
+  gap: 8px;
+
+  label {
+    @extend %label;
+  }
+
+  textarea {
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    border: 1px solid var(--lighter);
+    border-bottom: 2px solid var(--primary);
+    font-size: clamp(16px, 2.2vw, 18px);
+    font-weight: 500;
+    color: var(--dark);
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    resize: none;
+    height: 100px;
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active{
+        -webkit-box-shadow: 0 0 0 30px var(--secondary) inset !important;
+    }
+
+    &::placeholder {
+      font-size: clamp(16px, 2.2vw, 18px);
+      font-weight: 500;
+      color: var(--light);
+      width: 100%;
+    }
+  }
+
+  /* purgecss start ignore */
+  &.invalid-fld {
+    label {
+      color: var(--primary);
+    }
+
+    animation: shaker var(--main-transition);
+  }
+  /* purgecss end ignore */
+}
+
+
