@@ -5,17 +5,9 @@ block variables
     const title = "Коллегия адвокатов Юстиком"
     const description = ""
     const keywords = ""
-    const styles = ['./styles/template']
+    const styles = ['./styles/template', './styles/index']
 
 block content
-  .template-block
-    .container(style="display:flex;flex-direction:column;gap:20px;margin-bottom: 40px;")
-      h1 template-classes
-      span.base-title base-title
-      p.base-text base-text
-      p.base-text.base-text--lg base-text--lg
-      p.base-text.base-text--lined base-text--lined
-
   section
     .container
       include ./pug/components/content-block/content-block

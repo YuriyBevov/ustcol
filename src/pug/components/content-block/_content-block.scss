@@ -1,48 +1,98 @@
+/* purgecss start ignore */
 .content-block {
-  @extend %flex-column;
-  gap: 20px;
+	@extend %flex-column;
+	gap: 20px;
 
-  *:not(li) {
-    margin: 0;
-  }
+	*:not(li) {
+		margin: 0;
+	}
 
-  li {
-    margin-bottom: 10px;
-  }
+	li {
+		margin-bottom: 10px;
+	}
 
-  p,
-  span,
-  a {
-    font-size: clamp(16px, 2.2vw, 18px);
-    font-weight: 400;
-  }
+	p,
+	span,
+	a {
+		font-size: clamp(16px, 2.2vw, 18px);
+		font-weight: 400;
+	}
 
-  a {
-    @extend %main-hover;
-    color: var(--primary);
-  }
+	a {
+		@extend %main-hover;
+		color: var(--primary);
+	}
 
-  strong {
-    font-size: clamp(16px, 2.2vw, 18px);
-  }
+	strong {
+		font-size: clamp(16px, 2.2vw, 18px);
+	}
 
-  blockquote {
-    @extend %flex-column;
-    gap: 4px;
-    position: relative;
-    padding: 20px;
-    padding-left: 40px;
-    margin: 0;
-    background-color: var(--warning);
+	blockquote {
+		@extend %flex-column;
+		gap: 4px;
+		position: relative;
+		padding: 20px;
+		padding-left: 40px;
+		margin: 0;
+		background-color: var(--warning);
 
-    &::before {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      content: '';
-      width: 2px;
-      height: calc(100% - 40px);
-      background-color: var(--primary);
-    }
-  }
+		&::before {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			content: "";
+			width: 2px;
+			height: calc(100% - 40px);
+			background-color: var(--primary);
+		}
+	}
+
+	.table-wrapper {
+		overflow: hidden;
+		width: 100%;
+		max-width: fit-content;
+		overflow-x: auto;
+		margin: var(--main-offset) 0;
+
+		&::-webkit-scrollbar {
+			background-color: var(--dark);
+			height: 8px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--primary);
+			border-radius: 4px;
+		}
+
+		table {
+			border-collapse: collapse;
+			width: fit-content;
+			min-width: 440px;
+			margin-bottom: 5px;
+			overflow: hidden;
+			border-collapse: collapse;
+			border-spacing: 0;
+
+			thead td,
+			thead th {
+				font-weight: 600;
+				text-align: center;
+				background-color: var(--primary);
+				color: var(--white);
+			}
+
+			td {
+				text-align: center;
+				padding: 10px 12px;
+				border: 1px solid #d8d8d8;
+			}
+
+			&.outlined {
+				td {
+					border-color: transparent;
+				}
+			}
+		}
+	}
 }
+/* purgecss end ignore */
